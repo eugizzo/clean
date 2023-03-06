@@ -1,0 +1,6 @@
+.navbar{
+background-color: brown;
+}
+.navbar :active{
+    background-color: green;  
+}
