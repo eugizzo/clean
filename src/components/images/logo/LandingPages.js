@@ -1,14 +1,17 @@
 import React from 'react'
 import './landingPages.css'
 
+
 const LandingPages = () => {
+
     
   return (
     <div className=''>
-    <div className='landingPages'>
-      <h1 className='flex justify-center sm:justify-center text-[60px] wrap '>AI & IOT empowered,</h1>
-    <h1 className='flex justify-center text-[60px] -mt-4'> <span className='text-[#05C605] flex justify-center text-[60px] '>Smart waste </span> Collection </h1>
+    <div className="mt-8"  >
+     <div className='flex flex-wrap justify-center'><h1 className=' md:ml-4 text-[60px]  font-nunito '>AI & IOT </h1><h1 className=' text-[60px] -mt-2 pl-4 font-nunito' > empowered,</h1></div> 
+   <div className='flex flex-wrap justify-center'> <h1 className=' text-[60px] -mt-4 text-[#05C605]'> Smart waste </h1><h1 className=' text-[60px] -mt-4 pl-4' >Collection </h1></div>
       </div>   
+      
     </div>
   )
 }

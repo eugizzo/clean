@@ -1,3 +1,5 @@
-.landingPages{
+.landingPage{
     background-image: url('../intro-dotted.png');
+    margin-top: 40px;
+    /* background-color: blue; */
 }
