@@ -36,7 +36,7 @@ window.addEventListener('scroll',changeBackground);
         <div>
         
        
-    <nav  className="flex items-center justify-between flex-wrap bg-[#fafbfd] pt-3 pr-6 pl-6 pb-6">
+    <nav  className="flex fixed top-0 left-0 right-0 items-center justify-between flex-wrap bg-[#fafbfd] pt-3 pr-6 pl-6 pb-6">
     <div className="flex items-center flex-shrink-0 text-white ml-8 ">
 <a style={nab_brand} href=''>
     <img class="w-sm" src={Logo} alt="react logo" style={logo}/>
@@ -80,7 +80,7 @@ window.addEventListener('scroll',changeBackground);
         Contact Us
         </a>
 
-        <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white bg-[#05C605] hover:border-transparent  mt-4 lg:mt-0 mr-10">Login</a>
+        <a href="#" className="inline-block text-[15px] px-4 py-2 leading-none border rounded text-white border-white bg-[#05C605] hover:border-transparent  mt-4 lg:mt-0 mr-10">Login</a>
       </div>
     </div>
   </nav>
