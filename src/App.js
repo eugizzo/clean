@@ -1,6 +1,6 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LandingPages from './components/images/logo/LandingPages';
+import LandingPages from './components/LandingPages';
 function App() {
   return (
     <div >
