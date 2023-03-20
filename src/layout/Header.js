@@ -62,11 +62,11 @@ window.addEventListener('scroll',changeBackground);
       <a href="" className="block mt-4 lg:inline-block lg:mt-0 text-[#05C605] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
       <b>Home</b>
         </a>
-        <a href="r" className="block mt-4 lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
+        <a href="#zone" className="block mt-4 lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
         Zone
         </a>
 
-        <a href="" className="block mt-4 lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
+        <a href="#Features" className="block mt-4 lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
         Features
           </a>
           <a href="" className="block mt-4 lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
