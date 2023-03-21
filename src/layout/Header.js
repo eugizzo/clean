@@ -59,7 +59,7 @@ window.addEventListener('scroll',changeBackground);
       
       </div>
       <div className={`lg:flex ml-4 ${  isOpen ? "sm:block" : "hidden" } `} >
-      <a href="" className="block mt-4 lg:inline-block lg:mt-0 text-[#05C605] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
+      <a href="#home" className="block mt-4 lg:inline-block lg:mt-0 text-[#05C605] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
       <b>Home</b>
         </a>
         <a href="#zone" className="block mt-4 lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">

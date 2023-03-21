@@ -68,14 +68,9 @@ img {
   .location .container .available a {
     text-decoration: underline;
   }
-  @media screen and (max-width: 767px) {
-    .location.container ul {
-      grid-template-columns: repeat(1, 250px);
-    }
-  }
-  @media screen and (min-width: 767px) {
-    .features {
-      padding: 80px 2rem;
-    }
-  }
-  
+  @media screen and (max-width: 767px)
+  {
+   .location .container ul {
+    grid-template-columns: repeat(1, 250px);
+}
+}
