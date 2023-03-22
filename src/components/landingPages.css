@@ -80,7 +80,7 @@ img {
 
 .download {
   background-color: var(--body-bg-color);
-  background: linear-gradient( to bottom, rgba(245, 255, 244, 0.9), rgba(250, 251, 253, 1) ), url(https://cleankigali.kigalicity.gov.rw/static/media/kigali3_gF0kWcJ.2e16d0ba.fill-1200x630.189be22….jpg) no-repeat center center fixed;
+  background: linear-gradient( to bottom, rgba(245, 255, 244, 0.9), rgba(250, 251, 253, 1) ), url(../components//images/kigali.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 

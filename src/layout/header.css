@@ -1,7 +1,9 @@
 
+
 .navbar{
-background-color: brown;
+    background-color: transparent;
 }
-.navbar :active{
-    background-color: green;  
+  
+.navbar.colorChange{
+    background-color: #fff;
 }

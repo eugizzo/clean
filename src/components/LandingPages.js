@@ -6,27 +6,33 @@ import image from '../components/images/intro-system.4eead058de03f8a73a16.png'
 import doted_image from '../components/images/intro-dotted.png'
 import feature from '../components/images/feature.png'
 import phone from '../components/images/phone-mockups.png'
-import { Form } from 'react-router-dom'
+import google from '../components/images/app (3).png'
+import app from '../components/images/app.png'
+import risa from '../components/images/parterner/RISA.18041d1b569c9e286600.png'
+import minict from '../components/images/parterner/minict.a9d9d3eb77ad0479f7c7.png'
+import giz from './images/parterner/GIZ.525d1f85f4b5d2aad826.png'
+import digicenter from './images/parterner/digicenter.be983b7aa5a854cbc2c1.png'
+import cok from './images/parterner/cok.7d04350cfa6e331624cb.png'
 
 
 const LandingPages = () => {
 
   return (
     <div >
-      <Header className="absolute z-20" />
+      <Header className="" />
       <div className="-mt-[20px] line-dotted " id="home" >
         <img className='' src={doted_image} />
         <div className='flex flex-wrap justify-center '><h1 className=' mt-[120px] text-[60px] -mt-2  font-nunito  '>AI & IOT </h1><h1 className=' lg:mt-[120px] text-[60px] -mt-2 pl-4 font-nunito' > empowered,</h1></div>
         <div className='flex flex-wrap justify-center '> <h1 className=' text-[60px]  -mt-2 text-[#05C605] font-nunito '> Smart waste </h1><h1 className=' text-[60px]  -mt-4 pl-4 font-nunito ' >Collection </h1></div>
       </div>
       <div className='flex justify-center '>
-        <img src={image} className="w-[1000px]  mt-32 -sm:mt-2 absolute rounded-[20px] z-10" />
+        <img src={image} className="w-[1000px]  mt-32 -sm:mt-2 absolute rounded-[20px] " />
       </div>
       <div class="location mt-[530px]" id="zone">
         <div class="container">
 
 
-          <div className='absolute w-full left-0 right-0  z-30 h-50 bg-no-repeat bg-cover from-gray-600' >
+          <div className='absolute w-full left-0 right-0  z-1 h-50 bg-no-repeat bg-cover from-gray-600' >
             <h1 className='flex justify-center -mt-2  text-4xl'>Regions Covered</h1>
             <span className='text-[#05C605] flex justify-center text-4xl '>Summary</span>
             <br />
@@ -88,32 +94,121 @@ const LandingPages = () => {
 
             <ul className='ml-[40px] lg:ml-[10px] mt-3'>
               <i class="fa fa-check text-green" aria-hidden="true"></i>
-              <li className='mt-5 font-bold text-sm'>Monitoring of Waste Levels</li>
-              <li className='mt-5 font-bold text-sm'>Automatically Scheduled Waste Collection</li>
-              <li className='mt-5 font-bold text-sm'>Waste gathering and collection analytics</li>
-              <li className='mt-5 font-bold text-sm '>Real time map based insights </li>
+              <li className='mt-3 font-bold text-sm'>Monitoring of Waste Levels</li>
+              <li className='mt-3 font-bold text-sm'>Automatically Scheduled Waste Collection</li>
+              <li className='mt-3 font-bold text-sm'>Waste gathering and collection analytics</li>
+              <li className='mt-3 font-bold text-sm '>Real time map based insights </li>
 
             </ul>
           </div>
         </div>
       </div>
 
-      <div className='download'>
+      <div className='download' id='Download'>
         <div className='container'>
           <div className='lg:flex download justify-center lg:ml-[100px]  ml-[40px] gap-2'>
             <div className='lg:w-1/2 lg:mt-[100px] '>
-              <div className='download-info mt-[40px]'>
-                <h2 className='text-4xl fill-mode-both duration-1000 delay-0 repeat-1 opacity-100'>Smart City <span className='text-[#05C605]'>Waste <br/> collection </span>App</h2>
+              <div className='download-info'>
+                <h2 className='text-4xl fill-mode-both duration-1000 delay-0 repeat-1 opacity-100 pb-4'>Smart City
+                  <span className='text-[#05C605]'> Waste <br /> collection </span>App</h2>
+
+                <div>
+                  <p className='lg:mr-[10px] fill-mode-both duration-3000 delay-0 repeat-1 opacity-100 m-[10px]'>Download the app on Google Play or App Store and start enjoying a world-class AI empowered waste collection management features at the tip of your fingers</p>
+                </div>
+                <div className='flex pt-8'>
+                  <div> <img className='w-[150px]' src={google} /></div>
+                  <div> <img className='w-[150px]' src={app} /></div>
+                  <div></div>
+
+                </div>
               </div>
             </div>
             <div className='lg:w-1/2'>
-              <img src={phone} className='fill-mode-both duration-1000 delay-0 repeat-1 opacity-100' />
+              <img src={phone} className='w-[500px] fill-mode-both duration-1000 delay-0 repeat-1 opacity-100' />
             </div>
           </div>
 
         </div>
 
       </div>
+      <section id='partner'>
+        <div className='lg:flex bg-[#fafbfd] '>
+          <div className='w-[380px] bg-white'>
+          <h2 className='text-4xl lg:ml-[100px] lg:mr-8 lg:pt-[100px] lg:pb-[60px]'>Partners &
+          <br/><span className='text-[#05C605]'>Stakeholders</span></h2>
+          </div>
+          <div className='lg:w-[150px] bg-[#fafbfd]  lg:ml-12'>
+          <img className='w-[180px] lg:pt-[130px] lg:pb-[130px]' src={minict} />
+          </div>
+          <div>
+          <div className='lg:w-[150px] bg-[#f7f7f7]  lg:ml-12'>
+          <img className='w-[130px] lg:pt-[130px] lg:pb-[130px] ' src={giz} />
+          </div>
+          </div>
+          <div className='lg:w-[150px] bg-[#fafbfd] justify-center lg:ml-12'>
+          <img className='w-[80px] lg:pt-[130px] lg:pb-[130px]' src={cok} />
+          </div>
+          <div className='lg:w-[150px] bg-[#f7f7f7] lg:ml-12'>
+          <img className='w-[130px] lg:pt-[130px] lg:pb-[130px]' src={risa} />
+          </div>
+          <div className='lg:w-[150px]  lg:ml-12'>
+          <img className='w-[130px] lg:pt-[130px] lg:pb-[130px]' src={digicenter} />
+          </div>
+          <div className='lg:w-[150px] bg-white' ></div>
+          
+          
+
+        </div>
+      </section>
+
+      <section id="#ContactUs" className='bg-[#fafbfd] '>
+      
+      <div className='container'>
+      <div className='lg:flex'>
+      <div className='lg:w-1/3'></div>
+      <div className='lg:w-1/3 m-3 '>
+      
+      
+      
+      
+  <form class="bg-white shadow-md rounded-2xl  mt-20 px-8 pt-6 pb-8 mb-4">
+  <h2 className='text-4xl mt-10 mb-6 '>Get in touch
+      <br/>with us</h2>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm  mb-2" for="username">
+      Names: <span className='text-red-500'>*</span>
+      </label>
+      <input class="bg-[#fafbfd] form-control hover:border-green-500 hover:border-2" id="username" type="text" />
+    </div>
+    <div class="mb-4">
+    <label class="block text-gray-700 text-sm  mb-2" for="username">
+    Email Address:<span className='text-red-500'>*</span>
+    </label>
+    <input class="bg-[#fafbfd] form-control hover:border-green-500 hover:border-2" id="username" type="text" />
+  </div>
+  <div class="mb-4">
+  <label class="block text-gray-700 text-sm mb-2" for="username">
+  Message: <span className='text-red-500 hover:border-green-500 hover:border-2'>*</span>
+  </label>
+  <textarea class="bg-[#fafbfd] form-control" id="username" type="text" />
+</div>
+    <div class="">
+      <button class=" w-full bg-[#05C605]  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+       Submit
+      </button>
+     
+    </div>
+  </form>
+  
+      </div>
+      
+      
+      </div>
+      <div className='w-1/3'></div>
+      </div>
+      
+      
+      </section>
 
     </div>
   )

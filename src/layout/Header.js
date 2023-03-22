@@ -1,6 +1,7 @@
 
 import React,{useState,useEffect}  from 'react'
 import Logo from '../components/images/logo/download.png'
+import './header.css'
 const Header = (Header) => {
     const logo = {
         color: "white",
@@ -15,27 +16,29 @@ const Header = (Header) => {
     //    marginRight: '1rem'
     }
   
-    const [navbar, setNavbar] = useState(false);
+
       const [isOpen, setisOpen] = useState(false);
-    
-      function handleClick() {
+
+      const handleClick=()=> {
         setisOpen(!isOpen);
       }
-    const changeBackground =() =>{
-      if(window.scrollY>=80){
-          setNavbar(true);
-      }
-      else{
-          setNavbar(false); 
-      }
-  }
-window.addEventListener('scroll',changeBackground);
+
+      const [colorChange, setColorchange] = useState(false);
+      const changeNavbarColor = () =>{
+         if(window.scrollY >= 80){
+           setColorchange(true);
+         }
+         else{
+           setColorchange(false);
+         }
+      };
+      window.addEventListener('scroll', changeNavbarColor);
 
     return (
         <div>
         
-       
-    <nav  className="flex fixed top-0 left-0 right-0 items-center justify-between flex-wrap bg-[#fafbfd] pt-3 pr-6 pl-6 pb-6">
+     
+    <nav  className={`flex fixed top-0 left-0 right-0 items-center justify-between flex-wrap pt-3 pr-6 pl-6 pb-6 ${colorChange ? 'navbar colorChange' : 'navbar'}`}>
     <div className="flex items-center flex-shrink-0 text-white ml-8 ">
 <a style={nab_brand} href=''>
     <img class="w-sm" src={Logo} alt="react logo" style={logo}/>
@@ -58,32 +61,32 @@ window.addEventListener('scroll',changeBackground);
       
       </div>
       <div className={`lg:flex ml-4 ${  isOpen ? "sm:block" : "hidden" } `} >
-      <a href="#home" className="block mt-4 lg:inline-block lg:mt-0 text-[#05C605] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
+      <a href="#home" className="block lg:inline-block lg:mt-0 text-[#05C605] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
       <b>Home</b>
         </a>
-        <a href="#zone" className="block mt-4 lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
+        <a href="#zone" className="block  lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
         Zone
         </a>
 
-        <a href="#Features" className="block mt-4 lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
+        <a href="#Features" className="block lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
         Features
           </a>
-          <a href="" className="block mt-4 lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
+          <a href="#Download" className="block lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
           Download
           </a>
-          <a href="" className="block mt-4 lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] pr-10 duration-300">
+          <a href="#partner" className="block lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] pr-10 duration-300">
           Partners
           </a>
-        <a href="" className="block mt-4 lg:inline-block lg:mt-0 text-[#abacad]  hover:text-[17px] hover:text-[#05C605] pr-10 duration-300">
+        <a href="#ContactUs" className="block lg:inline-block lg:mt-0 text-[#abacad]  hover:text-[17px] hover:text-[#05C605] pr-10 duration-300">
         
         Contact Us
         </a>
 
-        <a href="#" className="inline-block text-[15px] px-4 py-2 leading-none border rounded text-white border-white bg-[#05C605] hover:border-transparent  mt-4 lg:mt-0 mr-10">Login</a>
+        <a href="#" className="inline-block text-[15px] px-4 py-2 leading-none border rounded text-white border-white bg-[#05C605] hover:border-transparent   lg:mt-0 mr-10">Login</a>
       </div>
     </div>
   </nav>
-        </div>
+  </div> 
     );
 }
 export default Header;
