@@ -5,6 +5,8 @@ import image from '../components/images/intro-system.4eead058de03f8a73a16.png'
 // import Section from './Section'
 import doted_image from '../components/images/intro-dotted.png'
 import feature from '../components/images/feature.png'
+import phone from '../components/images/phone-mockups.png'
+import { Form } from 'react-router-dom'
 
 
 const LandingPages = () => {
@@ -70,30 +72,49 @@ const LandingPages = () => {
         </div>
       </div>
 
-      <div className='bg-white -mt-[300px]' id="Features">
+      <div className='bg-white -mt-[300px] ' id="Features">
         <div className='lg:flex  justify-around -mt-[60px] '>
-          <div className='lg:w-1/2 feature features  mt-[70px] lg:ml-[100px] ml-[40px]  m-8  '><img src={feature} />
+          <div className='lg:w-1/2 feature features  mt-[70px] lg:ml-[100px] ml-[40px]  m-8  '>
+            <img src={feature} />
           </div>
           <div className='lg:w-1/2'>
 
             <h1 className='flex-no-wrap text-4xl lg:mt-[140px] mt-[30px] ml-[40px] lg:ml-[10px]  '>Features <span className='text-[#05C605]'>Covered</span></h1>
 
             <p className='ml-[40px] lg:ml-[10px] mt-5 mr-[60px]'>
-              CleanKigali enables the city of kigali to automatically monitor and 
+              CleanKigali enables the city of kigali to automatically monitor and
               predict wast levels and collect them ontime using artificial intelligence and internet of things, the main features are:
             </p>
 
             <ul className='ml-[40px] lg:ml-[10px] mt-3'>
-            <i class="fa fa-check text-green" aria-hidden="true"></i>
+              <i class="fa fa-check text-green" aria-hidden="true"></i>
               <li className='mt-5 font-bold text-sm'>Monitoring of Waste Levels</li>
               <li className='mt-5 font-bold text-sm'>Automatically Scheduled Waste Collection</li>
               <li className='mt-5 font-bold text-sm'>Waste gathering and collection analytics</li>
-              <li className='mt-5 font-bold text-sm'>Real time map based insights </li>
+              <li className='mt-5 font-bold text-sm '>Real time map based insights </li>
 
             </ul>
           </div>
         </div>
       </div>
+
+      <div className='download'>
+        <div className='container'>
+          <div className='lg:flex download justify-center lg:ml-[100px]  ml-[40px] gap-2'>
+            <div className='lg:w-1/2 lg:mt-[100px] '>
+              <div className='download-info mt-[40px]'>
+                <h2 className='text-4xl fill-mode-both duration-1000 delay-0 repeat-1 opacity-100'>Smart City <span className='text-[#05C605]'>Waste <br/> collection </span>App</h2>
+              </div>
+            </div>
+            <div className='lg:w-1/2'>
+              <img src={phone} className='fill-mode-both duration-1000 delay-0 repeat-1 opacity-100' />
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   )
 }

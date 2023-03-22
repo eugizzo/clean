@@ -1,6 +1,7 @@
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Form } from "react-router-dom";
 import LandingPages from './components/LandingPages';
+
 function App() {
   return (
     <div >
@@ -10,6 +11,7 @@ function App() {
 <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPages />}>
+        
         </Route>
       </Routes>
    </BrowserRouter>

@@ -21,16 +21,15 @@ const Header = (Header) => {
       function handleClick() {
         setisOpen(!isOpen);
       }
-const changeBackground =() =>{
-    if(window.scrollY>=80){
-        setNavbar(true);
-    }
-    else{
-        setNavbar(false); 
-    }
-}
+    const changeBackground =() =>{
+      if(window.scrollY>=80){
+          setNavbar(true);
+      }
+      else{
+          setNavbar(false); 
+      }
+  }
 window.addEventListener('scroll',changeBackground);
-
 
     return (
         <div>
@@ -87,5 +86,4 @@ window.addEventListener('scroll',changeBackground);
         </div>
     );
 }
-
 export default Header;
