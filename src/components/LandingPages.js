@@ -1,6 +1,7 @@
 import React from 'react'
 import './landingPages.css'
 import Header from '../layout/Header'
+import Footer from '../layout/Footer'
 import image from '../components/images/intro-system.4eead058de03f8a73a16.png'
 // import Section from './Section'
 import doted_image from '../components/images/intro-dotted.png'
@@ -104,7 +105,7 @@ const LandingPages = () => {
         </div>
       </div>
 
-      <div className='download' id='Download'>
+      <div className='download ' id='Download'>
         <div className='container'>
           <div className='lg:flex download justify-center lg:ml-[100px]  ml-[40px] gap-2'>
             <div className='lg:w-1/2 lg:mt-[100px] '>
@@ -113,7 +114,7 @@ const LandingPages = () => {
                   <span className='text-[#05C605]'> Waste <br /> collection </span>App</h2>
 
                 <div>
-                  <p className='lg:mr-[10px] fill-mode-both duration-3000 delay-0 repeat-1 opacity-100 m-[10px]'>Download the app on Google Play or App Store and start enjoying a world-class AI empowered waste collection management features at the tip of your fingers</p>
+                  <p className=' fill-mode-both duration-3000 delay-0 repeat-1 opacity-100 '>Download the app on Google Play or App Store and start enjoying a world-class AI empowered waste collection management features at the tip of your fingers</p>
                 </div>
                 <div className='flex pt-8'>
                   <div> <img className='w-[150px]' src={google} /></div>
@@ -209,7 +210,10 @@ const LandingPages = () => {
       
       
       </section>
+<section>
+<Footer />
 
+</section>
     </div>
   )
 }
