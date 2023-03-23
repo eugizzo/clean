@@ -1,6 +1,6 @@
 import React from 'react'
 import './landingPages.css'
-import Header from '../layout/Header'
+
 import Footer from '../layout/Footer'
 import image from '../components/images/intro-system.4eead058de03f8a73a16.png'
 // import Section from './Section'
@@ -14,13 +14,15 @@ import minict from '../components/images/parterner/minict.a9d9d3eb77ad0479f7c7.p
 import giz from './images/parterner/GIZ.525d1f85f4b5d2aad826.png'
 import digicenter from './images/parterner/digicenter.be983b7aa5a854cbc2c1.png'
 import cok from './images/parterner/cok.7d04350cfa6e331624cb.png'
-import { FaTwitter ,FaYoutube ,FaFlickr ,FaCheckCircle} from "react-icons/fa";
-
+import { FaCheckCircle} from "react-icons/fa";
+import { useCarousel } from 'use-carousel-hook';
 const LandingPages = () => {
 
+
+const { ref, previous, next, setCurrent, reset } = useCarousel();
   return (
     <div >
-      <Header className="" />
+      
       <div className="-mt-[20px] line-dotted " id="home" >
         <img id='home' className='' src={doted_image} />
         <div className='flex flex-wrap justify-center '><h1 className=' mt-[120px] text-[60px] -mt-2  font-nunito  '>AI & IOT </h1><h1 className=' lg:mt-[120px] text-[60px] -mt-2 pl-4 font-nunito' > empowered,</h1></div>
@@ -171,6 +173,32 @@ const LandingPages = () => {
 
         </div>
       </section>
+
+
+<section>
+<button onClick={() => previous()}>Previous</button>
+            <button onClick={() => previous(2)}>Go back 2 items</button>
+            <button onClick={() => next()}>Next</button>
+            <button onClick={() => next(2)}>Go forward 2 items</button>
+            <button onClick={() => reset()}>Reset</button>
+            <button onClick={() => setCurrent(2)}>Set index to 2</button>
+            <ul ref={ref} className="carousel__list">
+                <li className="carousel__item">
+                  <img src='https://picsum.photos/200' alt=''/>
+                </li>
+                <li className="carousel__item">
+                  <img src='https://picsum.photos/201' alt=''/>
+                </li>
+                <li className="carousel__item">
+                  <img src='https://picsum.photos/202' alt=''/>
+                </li>
+                <li className="carousel__item">
+                  <img src='https://picsum.photos/203' alt=''/>
+                </li>
+            </ul>
+
+</section>
+
 
       <section id="#ContactUs" className='bg-[#fafbfd] '>
       
