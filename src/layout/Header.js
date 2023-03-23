@@ -40,7 +40,7 @@ const Header = (Header) => {
      
     <nav  className={`flex fixed top-0 left-0 right-0 items-center justify-between flex-wrap pt-3 pr-6 pl-6 pb-6 ${colorChange ? 'navbar colorChange' : 'navbar'}`}>
     <div className="flex items-center flex-shrink-0 text-white ml-8 ">
-<a style={nab_brand} href=''>
+<a style={nab_brand} href='#home'>
     <img class="w-sm" src={Logo} alt="react logo" style={logo}/>
     </a>
       <span className="font-Nunito text-[#232323] tracking-tight pl-4 ">Clean<b>Kigali</b>

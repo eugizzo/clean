@@ -14,7 +14,7 @@ import minict from '../components/images/parterner/minict.a9d9d3eb77ad0479f7c7.p
 import giz from './images/parterner/GIZ.525d1f85f4b5d2aad826.png'
 import digicenter from './images/parterner/digicenter.be983b7aa5a854cbc2c1.png'
 import cok from './images/parterner/cok.7d04350cfa6e331624cb.png'
-
+import { FaTwitter ,FaYoutube ,FaFlickr ,FaCheckCircle} from "react-icons/fa";
 
 const LandingPages = () => {
 
@@ -22,7 +22,7 @@ const LandingPages = () => {
     <div >
       <Header className="" />
       <div className="-mt-[20px] line-dotted " id="home" >
-        <img className='' src={doted_image} />
+        <img id='home' className='' src={doted_image} />
         <div className='flex flex-wrap justify-center '><h1 className=' mt-[120px] text-[60px] -mt-2  font-nunito  '>AI & IOT </h1><h1 className=' lg:mt-[120px] text-[60px] -mt-2 pl-4 font-nunito' > empowered,</h1></div>
         <div className='flex flex-wrap justify-center '> <h1 className=' text-[60px]  -mt-2 text-[#05C605] font-nunito '> Smart waste </h1><h1 className=' text-[60px]  -mt-4 pl-4 font-nunito ' >Collection </h1></div>
       </div>
@@ -33,7 +33,7 @@ const LandingPages = () => {
         <div class="container">
 
 
-          <div className='absolute w-full left-0 right-0  z-1 h-50 bg-no-repeat bg-cover from-gray-600' >
+          <div className='w-full   h-50 bg-no-repeat bg-cover from-gray-600' >
             <h1 className='flex justify-center -mt-2  text-4xl'>Regions Covered</h1>
             <span className='text-[#05C605] flex justify-center text-4xl '>Summary</span>
             <br />
@@ -44,7 +44,7 @@ const LandingPages = () => {
           </div>
           <div className='flex justify-center'>
             <div className='flex lg:flex-no-wrap sm:flex-wrap'>
-              <ul className='pt-[230px]'>
+              <ul className=''>
 
                 <li>
                   <i class="fa fa-thumb-tack"></i>
@@ -88,18 +88,28 @@ const LandingPages = () => {
 
             <h1 className='flex-no-wrap text-4xl lg:mt-[140px] mt-[30px] ml-[40px] lg:ml-[10px]  '>Features <span className='text-[#05C605]'>Covered</span></h1>
 
-            <p className='ml-[40px] lg:ml-[10px] mt-5 mr-[60px]'>
+            <p className='ml-[40px] lg:ml-[10px] mt-5 mr-[80px]'>
               CleanKigali enables the city of kigali to automatically monitor and
               predict wast levels and collect them ontime using artificial intelligence and internet of things, the main features are:
             </p>
 
-            <ul className='ml-[40px] lg:ml-[10px] mt-3'>
-              <i class="fa fa-check text-green" aria-hidden="true"></i>
-              <li className='mt-3 font-bold text-sm'>Monitoring of Waste Levels</li>
-              <li className='mt-3 font-bold text-sm'>Automatically Scheduled Waste Collection</li>
+            <ul className='ml-[25px] lg:ml-[0px] mt-3'>
+            <div className='flex'>
+              <FaCheckCircle className='text-[#05C605] text-sm ml-4 mr-2 mt-3'/>
+              <li className=' font-bold text-sm mt-3 '>Monitoring of Waste Levels</li>
+             </div> 
+             <div className='flex'>
+              <FaCheckCircle className='text-[#05C605] text-sm ml-4 mr-2 mt-3'/>
+             <li className='mt-3 font-bold text-sm'>Automatically Scheduled Waste Collection</li>
+             </div> 
+             <div className='flex'>
+              <FaCheckCircle className='text-[#05C605] text-sm ml-4 mr-2 mt-3'/>
               <li className='mt-3 font-bold text-sm'>Waste gathering and collection analytics</li>
+              </div>
+              <div className='flex'>
+              <FaCheckCircle className='text-[#05C605] text-sm ml-4 mr-2 mt-3'/>
               <li className='mt-3 font-bold text-sm '>Real time map based insights </li>
-
+              </div>
             </ul>
           </div>
         </div>
@@ -179,19 +189,19 @@ const LandingPages = () => {
       <label class="block text-gray-700 text-sm  mb-2" for="username">
       Names: <span className='text-red-500'>*</span>
       </label>
-      <input class="bg-[#fafbfd] form-control hover:border-green-500 hover:border-2" id="username" type="text" />
+      <input class="bg-[#fafbfd] form-control hover:border-green-500 hover:border-2" id="name" type="text" />
     </div>
     <div class="mb-4">
-    <label class="block text-gray-700 text-sm  mb-2" for="username">
+    <label class="block text-gray-700 text-sm  mb-2" for="email">
     Email Address:<span className='text-red-500'>*</span>
     </label>
-    <input class="bg-[#fafbfd] form-control hover:border-green-500 hover:border-2" id="username" type="text" />
+    <input class="bg-[#fafbfd] form-control hover:border-green-500 hover:border-2" id="email" type="text" />
   </div>
   <div class="mb-4">
-  <label class="block text-gray-700 text-sm mb-2" for="username">
+  <label class="block text-gray-700 text-sm mb-2" for="Message">
   Message: <span className='text-red-500 hover:border-green-500 hover:border-2'>*</span>
   </label>
-  <textarea class="bg-[#fafbfd] form-control" id="username" type="text" />
+  <textarea class="bg-[#fafbfd] form-control" id="Message" type="text" />
 </div>
     <div class="">
       <button class=" w-full bg-[#05C605]  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
