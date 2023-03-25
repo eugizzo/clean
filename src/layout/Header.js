@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Logo from '../components/images/logo/download.png'
 import './header.css'
 const Header = (Header) => {
@@ -81,7 +82,7 @@ const Header = (Header) => {
               Contact Us
             </a>
 
-            <a href="#" className="inline-block text-[15px] px-4 py-2 leading-none border rounded text-white border-white bg-[#05C605] hover:border-transparent   lg:mt-0 mr-10">Login</a>
+            <Link to="login" className="inline-block text-[15px] px-4 py-2 leading-none border rounded text-white border-white bg-[#05C605] hover:border-transparent   lg:mt-0 mr-10">Login</Link>
           </div>
         </div>
       </nav>
