@@ -7,7 +7,7 @@ const Form = () => {
 
   return (
     <div>
-      {text}
+      {text.split(" ")}
     </div>
   )
 }

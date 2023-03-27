@@ -47,7 +47,7 @@ const Header = (Header) => {
         </div>
         <div className="block lg:hidden">
           <button onClick={handleClick} className="flex items-center px-3 py-2 border-3 rounded text-black border-gray-500  hover:border-[#05C605] hover:text-[#05C605]">
-            {isOpen && (<svg className="fill-current texiblue-300 h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
+            {isOpen && (<svg className="fill-current texiblue-300 h-3 w-3 " viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
 
             )}
             {!isOpen && (
@@ -71,8 +71,9 @@ const Header = (Header) => {
             <a href="#Features" className="block lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
               Features
             </a>
-            <a href="#Download" className="block lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
+            <a href="#Download" className="block lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300 ">
               Download
+             
             </a>
             <a href="#partner" className="block lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] pr-10 duration-300">
               Partners

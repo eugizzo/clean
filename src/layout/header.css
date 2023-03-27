@@ -12,4 +12,18 @@
     a{
        padding: 5px;
     }
+    .navbar{
+        background-color: #fff; 
+    }
 }
+
+/* Specific styles for non-active links */
+.link {
+    color: white;
+  }
+  
+  /* Specific styles for active links */
+  .link-active {
+    color: rgb(8, 113, 11);
+    
+  }
