@@ -14,14 +14,14 @@ import minict from '../components/images/parterner/minict.a9d9d3eb77ad0479f7c7.p
 import giz from './images/parterner/GIZ.525d1f85f4b5d2aad826.png'
 import digicenter from './images/parterner/digicenter.be983b7aa5a854cbc2c1.png'
 import cok from './images/parterner/cok.7d04350cfa6e331624cb.png'
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle,FaEyeSlash } from "react-icons/fa";
 import Header from '../layout/Header'
 
 const LandingPages = () => {
   return (
     <div >
       <div>
-      <Header className=" overflow-auto" />
+      <Header className="" />
       <div className="-mt-[20px] line-dotted " id="home" >
         <img id='home' className='' src={doted_image} />
         <div className='flex flex-wrap justify-center '><h1 className=' mt-[120px] text-[60px] -mt-2  font-nunito  '>AI & IOT </h1><h1 className=' lg:mt-[120px] text-[60px] -mt-2 pl-4 font-nunito' > empowered,</h1></div>
@@ -33,7 +33,7 @@ const LandingPages = () => {
       <div class="location " id="zone">
         <div class="container">
 
-          <div className='w-full h-50 bg-no-repeat bg-cover from-gray-600' >
+          <div className='w-full  bg-no-repeat bg-cover' >
             <h1 className='flex justify-center -mt-2  text-4xl'>Regions Covered</h1>
             <span className='text-[#05C605] flex justify-center text-4xl '>Summary</span>
             <br />
@@ -93,7 +93,7 @@ const LandingPages = () => {
               predict wast levels and collect them ontime using artificial intelligence and internet of things, the main features are:
             </p>
 
-            <ul className='ml-[25px] lg:ml-[0px] mt-3'>
+            <ul className='ml-[25px] lg:ml-[0px] mt-3 '>
               <div className='flex'>
                 <FaCheckCircle className='text-[#05C605] text-sm ml-4 mr-2 mt-3' />
                 <li className=' font-bold text-sm mt-3 '>Monitoring of Waste Levels</li>
@@ -117,7 +117,7 @@ const LandingPages = () => {
 
       <div className='download ' id='Download'>
         <div className='container'>
-          <div className='flex download justify-center lg:ml-[100px]  ml-[40px] gap-2'>
+          <div className='lg:flex download justify-center lg:ml-[100px]  ml-[40px] gap-2'>
             <div className='lg:w-1/2 lg:mt-[100px] '>
               <div className='download-info'>
                 <h2 className='text-4xl fill-mode-both duration-1000 delay-0 repeat-1 opacity-100 pb-4'>Smart City
@@ -144,12 +144,14 @@ const LandingPages = () => {
       </div>
       <section id='partner'>
         <div className='lg:flex bg-[#fafbfd] '>
-          <div className='w-[380px] bg-white'>
+        <div className='flex'>
+          <div className='lg:w-[380px] w-[190px] bg-white'>
             <h2 className='text-4xl lg:ml-[100px] lg:mr-8 lg:pt-[100px] lg:pb-[60px]'>Partners &
               <br /><span className='text-[#05C605]'>Stakeholders</span></h2>
           </div>
-          <div className='lg:w-[150px] bg-[#fafbfd]  lg:ml-12'>
+          <div className='lg:w-[150px] w-[70px] bg-[#fafbfd]  lg:ml-12'>
             <img className='w-[180px] lg:pt-[130px] lg:pb-[130px]' src={minict} />
+          </div>
           </div>
           <div>
             <div className='lg:w-[150px] bg-[#f7f7f7]  lg:ml-12'>
@@ -172,7 +174,7 @@ const LandingPages = () => {
         </div>
       </section>
     
-      <section id="#ContactUs" className='bg-[#fafbfd] pb-8'>
+      <section id="ContactUs" className='bg-[#fafbfd] pb-8'>
 
         <div className='container'>
           <div className='lg:flex'>

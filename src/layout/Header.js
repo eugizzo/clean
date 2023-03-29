@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../components/images/logo/download.png'
 import './header.css'
@@ -61,9 +61,9 @@ const Header = (Header) => {
           </div>
          
           <div className={`lg:flex ml-4 ${isOpen ? "sm:block " : "hidden"} `} >
-            <a href="#home" className="block lg:inline-block lg:mt-0 text-[#05C605] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
+         <Link to="/"><a href="#home" className="block lg:inline-block lg:mt-0 text-[#05C605] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
               <b>Home</b>
-            </a>
+            </a></Link> 
             <a href="#zone" className="block  lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] mr-10 duration-300">
               Zone
             </a>
@@ -75,13 +75,13 @@ const Header = (Header) => {
               Download
              
             </a>
-            <a href="#partner" className="block lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] pr-10 duration-300">
+            <Link href="#partner" className="block lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] pr-10 duration-300">
               Partners
-            </a>
-            <a href="#ContactUs" className="block lg:inline-block lg:mt-0 text-[#abacad]  hover:text-[17px] hover:text-[#05C605] pr-10 duration-300">
+            </Link>
+            <Link to="#ContactUs" className="block lg:inline-block lg:mt-0 text-[#abacad]  hover:text-[17px] hover:text-[#05C605] pr-10 duration-300">
 
               Contact Us
-            </a>
+            </Link>
 
             <Link to="login" className="inline-block text-[15px] px-4 py-2 leading-none border rounded text-white border-white bg-[#05C605] hover:border-transparent   lg:mt-0 mr-10">Login</Link>
           </div>

@@ -22,11 +22,8 @@ img {
     max-height: 100%;
     overflow-clip-margin: content-box;
     overflow: clip;
-
-   
-   
+  
 }
-
 
 .location {
     padding: 150px 0 400px 0;
@@ -70,6 +67,7 @@ img {
   
   .location .container .available a {
     text-decoration: underline;
+    color: black;
   }
   @media screen and (max-width: 767px)
   {
@@ -87,3 +85,4 @@ img {
 .gap-2 {
   gap: 0.5rem!important;
 }
+
