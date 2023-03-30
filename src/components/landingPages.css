@@ -4,9 +4,7 @@
 
 html {
   scroll-behavior: smooth;
-  padding-top: -20px;
 }
-
 .line-dotted img {
     position: fixed;
     top: 0px;

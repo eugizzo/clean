@@ -75,13 +75,13 @@ const Header = (Header) => {
               Download
              
             </a>
-            <Link href="#partner" className="block lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] pr-10 duration-300">
+            <a href="#partner" className="block lg:inline-block lg:mt-0 text-[#abacad] hover:text-[17px] hover:text-[#05C605] pr-10 duration-300">
               Partners
-            </Link>
-            <Link to="#ContactUs" className="block lg:inline-block lg:mt-0 text-[#abacad]  hover:text-[17px] hover:text-[#05C605] pr-10 duration-300">
+            </a>
+            <a href="#Contact" className="block lg:inline-block lg:mt-0 text-[#abacad]  hover:text-[17px] hover:text-[#05C605] pr-10 duration-300">
 
               Contact Us
-            </Link>
+            </a>
 
             <Link to="login" className="inline-block text-[15px] px-4 py-2 leading-none border rounded text-white border-white bg-[#05C605] hover:border-transparent   lg:mt-0 mr-10">Login</Link>
           </div>

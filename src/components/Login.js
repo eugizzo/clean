@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
-import Header from '../layout/Header'
+import LoginHeader from '../layout/LoginHeader'
 import { FaEyeSlash,FaEye } from "react-icons/fa";
 import HomeCarousel from './HomeCarousel';
 import '../layout/header.css'
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -29,16 +30,16 @@ const Login = () => {
   return (
     
     <div>
-     <Header className="" />
+     <LoginHeader className="" />
 
      <div className='container overflow-auto'>
        <div className='lg:flex'>
        <div className='lg:w-1/6'></div>
-         <div className='lg:w-2/6 lg:mt-52 mt-20 lg:mr-20 m-12 flex justify-center'>
+         <div className='lg:w-2/6 lg:mt-44 mt-20 lg:mr-20 m-12 flex justify-center'>
          <HomeCarousel />
          </div>
          <div className='lg:w-3/6 lg:mr-52 '>
-           <form onClick={onSubmit} class="bg-white shadow-md rounded-2xl  lg:mt-52  mt-8 px-8 pt-6 pb-8 mb-4">
+           <form onClick={onSubmit} class="bg-white shadow-md rounded-2xl  lg:mt-44  mt-8 px-8 pt-6 pb-8 mb-4">
              <h2 className='text-sm mt-2 mb-2 '>login</h2>
                
             
@@ -60,7 +61,7 @@ const Login = () => {
                <div className='flex justify-around'>
                <h6 className='mt-4 ml-8'>Can't login?</h6>
                <h6 className='mt-4  '>-</h6>
-               <h6 className=' mt-4 text-[#05C605]'>Login as SuperAdmin</h6>
+               <Link to='/SuperAdmin'><h6 className=' mt-4 text-[#05C605]'>Login as SuperAdmin</h6></Link>
                </div>
              </div>
            </form>
