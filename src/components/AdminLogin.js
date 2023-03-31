@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Header from '../layout/Header'
+import LoginHeader from '../layout/LoginHeader'
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import HomeCarousel from './HomeCarousel';
 import '../layout/header.css'
@@ -27,7 +27,7 @@ const AdminLogin = () => {
     return (
 
         <div>
-            <Header className="" />
+            <LoginHeader className="" />
 
             <div className='container overflow-auto'>
                 <div className='lg:flex'>
@@ -53,7 +53,7 @@ const AdminLogin = () => {
                             </div>
                             <div class="">
                                 <button class=" w-full bg-[#05C605] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                                    Login as SuperAdmin
+                                    Login
                                 </button>
                                 <div className='flex justify-around'>
                                     <h6 className='mt-4 ml-8'>Can't login?</h6>

@@ -149,20 +149,20 @@ const LandingPages = () => {
                 <h2 className='text-4xl lg:ml-[100px] lg:mr-8 lg:pt-[100px] lg:pb-[60px]'>Partners &
                   <br /><span className='text-[#05C605]'>Stakeholders</span></h2>
               </div>
-              <div className='lg:w-[150px] w-[70px] bg-[#fafbfd]  lg:ml-12'>
+              <div className='lg:w-[140px] w-[70px] bg-[#fafbfd]  lg:ml-12'>
                 <img className='w-[180px] lg:pt-[130px] lg:pb-[130px]' src={minict} />
               </div>
             </div>
             <div>
               <div className='lg:w-[150px] bg-[#f7f7f7]  lg:ml-12'>
-                <img className='w-[130px] lg:pt-[130px] lg:pb-[130px] ' src={giz} />
+                <img className='w-[130px] lg:pt-[130px] lg:pb-[160px] ' src={giz} />
               </div>
             </div>
             <div className='lg:w-[150px] bg-[#fafbfd] justify-center lg:ml-12'>
               <img className='w-[80px] lg:pt-[130px] lg:pb-[130px]' src={cok} />
             </div>
             <div className='lg:w-[150px] bg-[#f7f7f7] lg:ml-12'>
-              <img className='w-[130px] lg:pt-[130px] lg:pb-[130px]' src={risa} />
+              <img className='w-[130px] lg:pt-[140px] lg:pb-[130px]' src={risa} />
             </div>
             <div className='lg:w-[150px]  lg:ml-12'>
               <img className='w-[130px] lg:pt-[130px] lg:pb-[130px]' src={digicenter} />
