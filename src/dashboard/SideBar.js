@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState} from 'react'
 
 const SideBar = () => {
   return (
@@ -8,7 +8,7 @@ const SideBar = () => {
   <nav className="navbar  navbar-light">
     <div className=" ms-4 mb-4">
       <a href className="d-flex align-items-center mx-4">
-        <p className>Clean<span>Kigali</span></p>
+        <p className>Clean<span style='font-bold'>Kigali</span></p>
       </a>
       <hr />
       <div className="navbar-nav w-100">
@@ -22,22 +22,22 @@ const SideBar = () => {
         <div className="nav-item dropdown">
           <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i className="fa fa-calendar me-2 text-primary" />Post Event</a>
           <div className="dropdown-menu bg-transparent border-0" style={{paddingLeft: 30}}>
-            <a href="./event/addEvent.php" className="dropdown-item"><i className="fa fa-plus-circle me-2 text-primary" />Add New Event</a>
-            <a href="./event/EventList.php" className="dropdown-item"><i className="fa fa-file me-2 text-primary" />Event List</a>
+            <a href="" className="dropdown-item"><i className="fa fa-plus-circle me-2 text-primary" />Add New Event</a>
+            <a href="" className="dropdown-item"><i className="fa fa-file me-2 text-primary" />Event List</a>
           </div>
         </div>
         <div className="nav-item dropdown">
           <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i className="fa fa-user-circle me-2 text-primary" />Users</a>
           <div className="dropdown-menu bg-transparent border-0" style={{paddingLeft: 10}}>
-            <a href="./adduser/adduser.php" className="nav-item nav-link "><i className="fa fa-plus-circle me-2 text-primary" /> Add Users</a>
-            <a href="./adduser/listUser.php" className="dropdown-item"><i className="fa fa-file me-2 text-primary" />UserList</a>
+            <a href="" className="nav-item nav-link "><i className="fa fa-plus-circle me-2 text-primary" /> Add Users</a>
+            <a href="" className="dropdown-item"><i className="fa fa-file me-2 text-primary" />UserList</a>
           </div>
         </div>
         <div className="nav-item dropdown">
           <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i className="fa fa-image me-2 text-primary" />Gallery</a>
           <div className="dropdown-menu bg-transparent border-0" style={{paddingLeft: 10}}>
-            <a href="./gallery/insertGallery.php" className="nav-item nav-link "><i className="fa fa-plus-circle me-2 text-primary" /> Add Gallery</a>
-            <a href="./gallery/listOfGallery.php" className="dropdown-item"><i className="fa fa-file me-2 text-primary" />Gallery list</a>
+            <a href="#" className="nav-item nav-link "><i className="fa fa-plus-circle me-2 text-primary" /> Add Gallery</a>
+            <a href="#" className="dropdown-item"><i className="fa fa-file me-2 text-primary" />Gallery list</a>
           </div>
         </div>
       </div>
