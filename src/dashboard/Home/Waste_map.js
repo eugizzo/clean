@@ -12,7 +12,7 @@ import InfoDropdown from '../Navbar/InfoDropdown';
 import Locations from '../Navbar/Locations';
 import Types from '../Navbar/Types';
 import TrashLevel from '../Navbar/TrashLevel';
-import {locationList} from '../Navbar/DataLocation'
+
 
 
 const Waste_map = () => {
