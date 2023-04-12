@@ -22,7 +22,7 @@ function PickDates() {
                     onClick={() => setIsOpen(!isOpen)}
                     className="relative z-10 block rounded-md  focus:outline-none"
                 >
-                    <div className=' border  py-2 rounded-2 pl-2 pr-2 text-sm'>Date  :  {selectDate? selectDate+', '+selectEndDate: <span className='font-bold text-sm'>12-03-2023 , 12-04-2023</span>}
+                    <div className=' border  py-2 rounded-2 pl-2 pr-2 text-sm'>Date  :  {selectDate? selectDate+', '+selectEndDate: <span className='text-black text-sm'>12-03-2023 , 12-04-2023</span>}
                     </div>
                 </button>
 

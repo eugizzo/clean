@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaHome, FaClock, FaRegTrashAlt, FaAngleDown } from "react-icons/fa";
+import { FaHome, FaClock, FaRegTrashAlt, FaAngleDown ,FaCopy} from "react-icons/fa";
 import { FiUsers } from 'react-icons/fi';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle, faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -40,7 +40,7 @@ const SiderB = () => {
                     <div className="navbar-nav w-100 mt-16  z-0">
                         <div className="nav-item dropdown" >
                             <div style={{ display: 'flex' }}>
-                                <FaHome className='mt-2 text-sm text-[#05C605]' />
+                                <FaHome className='mt-[12px] text-sm text-[#05C605]' />
                                 <a href="#" className="nav-link text-black flex text-[17px] font-bold active" onClick={toggleMenu}>
 
                                     Home
@@ -63,11 +63,12 @@ const SiderB = () => {
 
                         <div className="nav-item dropdown" >
                             <div style={{ display: 'flex' }}>
-                                <Icon icon="oi:grid-two-up" className='text-sm mt-2' />
+                                <Icon icon="oi:grid-two-up" className='text-sm mt-[12px]' />
                                 <a href="#" className="nav-link text-black  flex text-[17px] font-bold " onClick={toggleMenu}>
 
                                     Analytics
                                 </a><span className='pl-16 mt-2' onClick={toggleMenu}>
+                                <FaAngleDown className='text-sm' />
                                 </span>
 
                             </div>
@@ -85,7 +86,7 @@ const SiderB = () => {
 
                         <div className="nav-item dropdown" >
                             <div style={{ display: 'flex' }}>
-                                <FaClock className='mt-2 text-sm' />
+                                <FaClock className='mt-[12px] text-sm' />
                                 <a href="#" className="nav-link flex text-black  text-[17px] font-bold" onClick={toggleMenu}>
 
                                     Schedules
@@ -110,7 +111,7 @@ const SiderB = () => {
                         <div className="nav-item dropdown ">
 
                             <div className='flex'>
-                                <FontAwesomeIcon icon={faExclamationTriangle} className='text-sm mt-2' />
+                                <FontAwesomeIcon icon={faExclamationTriangle} className='text-sm mt-[12px]' />
                                 <a href="#" className="nav-link text-black text-[17px] font-bold" onClick={toggleMenu}>
 
                                     Alerts
@@ -136,12 +137,12 @@ const SiderB = () => {
                         <div className="nav-item dropdown ">
 
                             <div className='flex'>
-                                <FontAwesomeIcon icon={faExclamationTriangle} className='text-sm mt-2' />
+                                <FaCopy className='text-sm mt-[12px]' />
                                 <a href="#" className="nav-link text-black text-[17px] font-bold" onClick={toggleMenu}>
 
                                     Incidents
                                 </a>
-                                <span className='pl-[62px] mt-2'>
+                                <span className='pl-[72px] mt-2'>
                                     <FaAngleDown />
                                 </span>
 
@@ -161,7 +162,7 @@ const SiderB = () => {
 
                         <div className="nav-item dropdown" >
                             <div style={{ display: 'flex' }}>
-                                <FaRegTrashAlt className='mt-[10px] text-sm' />
+                                <FaRegTrashAlt className='mt-[12px] text-sm' />
                                 <a href="#" className="nav-link  flex text-black text-[17px] font-bold" onClick={toggleMenu}>
 
                                     Bins & Devices
@@ -173,7 +174,7 @@ const SiderB = () => {
 
                         <div className="nav-item dropdown" >
                             <div style={{ display: 'flex' }}>
-                                <FiUsers className='mt-[10px] text-sm' />
+                                <FiUsers className='mt-[12px] text-sm' />
                                 <a href="#" className="nav-link  flex text-[17px] font-bold" onClick={toggleMenu}>
 
                                     Accounts

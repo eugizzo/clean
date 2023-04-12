@@ -88,7 +88,7 @@ const Waste_map = () => {
             <div className="col-sm-6 col-xl-3">
               <div className="bg-white h-28 rounded shadow d-flex align-items-center justify-content-between p-2">
                 <div className="ms-3">
-                  <p className="h-28">Number of Active Smart Bins </p>
+                  <p className="h-28 pt-2">Number of Active Smart Bins </p>
                   <h4 className="mb-0 text-primary" />
                 </div>
               </div>
