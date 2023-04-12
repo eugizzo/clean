@@ -127,7 +127,7 @@ const LandingPages = () => {
               predict wast levels and collect them ontime using artificial intelligence and internet of things, the main features are:
             </p>
 
-            <ul className='ml-[25px] lg:ml-[0px] mt-3' data-aos="fade-left" data-aos-duration="3000">
+            <ul className='ml-[25px] lg:ml-[0px] mt-3' data-aos="fade-left" data-aos-duration="2000">
               <div className='flex'>
                 <FaCheckCircle className='text-[#05C605] text-sm ml-4 mr-2 mt-3' />
                 <li className=' font-bold text-sm mt-3 '>Monitoring of Waste Levels</li>
@@ -211,7 +211,7 @@ const LandingPages = () => {
         </div>
       </section>
     
-      <section id="#ContactUs" className='bg-[#fafbfd] pb-8'
+      <section id="ContactUs" className='bg-[#fafbfd] pb-8'
       data-aos="fade-up"
         data-aos-duration="1500">
 

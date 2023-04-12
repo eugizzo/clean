@@ -12,20 +12,17 @@ import InfoDropdown from '../Navbar/InfoDropdown';
 import Locations from '../Navbar/Locations';
 import Types from '../Navbar/Types';
 import TrashLevel from '../Navbar/TrashLevel';
+import {locationList} from '../Navbar/DataLocation'
 
 
-const Waste_map = (props) => {
-  const { options, defaultValue, onChange, name, label } = props;
+const Waste_map = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleSidebar() {
     setIsOpen(!isOpen);
   }
 
-
   return (
-
-
 
     <div className=" d-flex p-0">
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
@@ -41,7 +38,7 @@ const Waste_map = (props) => {
               <FaBars onClick={toggleSidebar} />
 
             </a>
-            <p className='pl-8 text-xl font-bold'>C.Waste Map</p>
+            <p className='pl-8 text-[15px] text-black font-bold'>C.Waste Map</p>
           </div>
 
           <div className="navbar-nav  ms-auto">
@@ -62,7 +59,11 @@ const Waste_map = (props) => {
 
         <div className='flex '>
           <div className='bg-[#fafbfd]  pl-5'>
-            <Locations />
+          
+         
+            <Locations  />
+         
+                 
           </div>
           <div className='ml-6'>
             <Types />
@@ -78,7 +79,7 @@ const Waste_map = (props) => {
             <div className="col-sm-6 col-xl-3 ">
               <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2 ">
                 <div className="ms-3">
-                  <p className="xl:mb-10 lg:mb-16"> Estimated Total Waste
+                  <p className="h-24 text-black"> Estimated Total Waste
                     Collection</p>
                   <h4 className="mb-0 text-primary" />
                 </div>
@@ -87,7 +88,7 @@ const Waste_map = (props) => {
             <div className="col-sm-6 col-xl-3">
               <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2">
                 <div className="ms-3">
-                  <p className="mb-10">Number of Active Smart Bins </p>
+                  <p className="h-24 text-black">Number of Active Smart Bins </p>
                   <h4 className="mb-0 text-primary" />
                 </div>
               </div>
@@ -95,7 +96,7 @@ const Waste_map = (props) => {
             <div className="col-sm-6 col-xl-3">
               <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2">
                 <div className="ms-3">
-                  <p className="mb-16"> Upcoming Schedules
+                  <p className="h-24 text-black"> Total Collection 
                   </p>
                   <h4 className="mb-0 text-primary" />
                 </div>
@@ -104,7 +105,7 @@ const Waste_map = (props) => {
             <div className="col-sm-6 col-xl-3">
               <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2">
                 <div className="ms-3">
-                  <p className="mb-16">Total users</p>
+                  <p className="h-24 text-black"> Upcoming Schedules</p>
                   <h4 className="mb-0 text-primary" />
                 </div>
               </div>

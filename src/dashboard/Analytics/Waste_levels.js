@@ -37,7 +37,7 @@ const Waste_map = () => {
               <FaBars onClick={toggleSidebar} />
 
             </a>
-            <p className='pl-8 text-xl font-bold'>waste_levels</p>
+            <p className='pl-8 text-[15px] font-bold text-black'>waste_levels</p>
           </div>
 
           <div className="navbar-nav  ms-auto">
@@ -77,10 +77,18 @@ const Waste_map = () => {
         <div className="container-fluid pt-4 px-4">
           <div className="row g-4">
             <div className="col-sm-6 col-xl-3 ">
-              <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2 ">
+              <div className="bg-white  rounded shadow d-flex align-items-center justify-content-between p-2 ">
                 <div className="ms-3">
-                  <p className="xl:mb-10 lg:mb-16"> Estimated Total Waste
-                    Collection</p>
+                  <p className=" h-24"> Estimated Total Waste Collection</p>
+                    
+                  <h4 className="mb-0 text-primary" />
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 col-xl-3">
+              <div className="bg-white h-28 rounded shadow d-flex align-items-center justify-content-between p-2">
+                <div className="ms-3">
+                  <p className="h-28">Number of Active Smart Bins </p>
                   <h4 className="mb-0 text-primary" />
                 </div>
               </div>
@@ -88,15 +96,7 @@ const Waste_map = () => {
             <div className="col-sm-6 col-xl-3">
               <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2">
                 <div className="ms-3">
-                  <p className="mb-10">Number of Active Smart Bins </p>
-                  <h4 className="mb-0 text-primary" />
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-xl-3">
-              <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2">
-                <div className="ms-3">
-                  <p className="mb-16"> Upcoming Schedules
+                  <p className="h-24"> Total Collection
                   </p>
                   <h4 className="mb-0 text-primary" />
                 </div>
@@ -105,7 +105,7 @@ const Waste_map = () => {
             <div className="col-sm-6 col-xl-3">
               <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2">
                 <div className="ms-3">
-                  <p className="mb-16">Total users</p>
+                  <p className="h-24">Upcoming Schedules</p>
                   <h4 className="mb-0 text-primary" />
                 </div>
               </div>

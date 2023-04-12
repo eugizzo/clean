@@ -11,7 +11,7 @@ function TrashLevel() {
                     onClick={() => setIsOpen(!isOpen)}
                     className="relative z-10 block rounded-md  focus:outline-none"
                 >
-                    <div className=' border w-[140px] py-2 rounded-2 pl-2 text-sm'>Trash levels  :  <span className='font-bold text-sm'>All</span> 
+                    <div className=' border w-[140px] py-2 rounded-2 pl-2 text-sm'>Trash levels  :  <span className=' text-sm text-black'>All</span> 
                     <FontAwesomeIcon icon={faCaretDown}  className='pl-2'/>
                     </div>
                 </button>
