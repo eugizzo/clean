@@ -12,13 +12,19 @@ import Types from '../Navbar/Types';
 import TrashLevel from '../Navbar/TrashLevel';
 import PickDates from '../Navbar/PickDates';
 
-const Waste_map = () => {
+const Pending_schedules= () => {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleSidebar() {
     setIsOpen(!isOpen);
   }
 
+
+  const [activeTab, setActiveTab] = useState('home');
+
+  const handleTabClick = (tabName) => {
+    setActiveTab(tabName);
+  };
   return (
 
 
@@ -74,49 +80,48 @@ const Waste_map = () => {
 
 
         <hr className='mt-3 ml-5 mr-5' />
-        <div className="container-fluid pt-4 px-4">
-          <div className="row g-4">
-            <div className="col-sm-6 col-xl-3 ">
-              <div className="bg-white  rounded shadow d-flex align-items-center justify-content-between p-2 ">
-                <div className="ms-3">
-                  <p className=" h-24"> Estimated Total Waste Collection</p>
-                    
-                  <h4 className="mb-0 text-primary" />
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-xl-3">
-              <div className="bg-white h-28 rounded shadow d-flex align-items-center justify-content-between p-2">
-                <div className="ms-3">
-                  <p className="h-28 pt-2">Number of Active Smart Bins </p>
-                  <h4 className="mb-0 text-primary" />
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-xl-3">
-              <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2">
-                <div className="ms-3">
-                  <p className="h-24"> Total Collection
-                  </p>
-                  <h4 className="mb-0 text-primary" />
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 col-xl-3">
-              <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2">
-                <div className="ms-3">
-                  <p className="h-24">Upcoming Schedules</p>
-                  <h4 className="mb-0 text-primary" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
+
+        <nav className='mt-4 ml-5'>
+        <ul className='flex'>
+          <li>
+            <button className='pr-5' onClick={() => handleTabClick('home')}>All</button>
+          </li>
+          <li>
+            <button className='pr-5' onClick={() => handleTabClick('about')}>On Time</button>
+          </li>
+          <li>
+            <button onClick={() => handleTabClick('contact')}>Over Due</button>
+          </li>
+        </ul>
+      </nav>
+      <hr className=' ml-3 mr-5' />
+      <div className='ml-4  bg-white  rounded mr-4'>
+      {activeTab === 'home' && (
+        <div>
+        <div className='col-sm-4'>
+        <input type="text" placeholder='Search Trash Types...' className='mt-3 bg-[#fafbfd] form-control border-1 rounded-sm hover:border-green-500' /> 
+      </div>
+    
+        </div>
+      )}
+      {activeTab === 'about' && (
+        <div>
+          <h1>About me</h1>
+          <p>I am a web developer based in San Francisco.</p>
+        </div>
+      )}
+      {activeTab === 'contact' && (
+        <div>
+          <h1>Contact me</h1>
+          <p>You can email me at example@example.com.</p>
+        </div>
+      )}
+      </div>
       </div>
 
     </div>
   )
 }
 
-export default Waste_map
+export default Pending_schedules

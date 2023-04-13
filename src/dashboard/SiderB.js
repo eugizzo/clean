@@ -73,11 +73,11 @@ const SiderB = () => {
 
                             </div>
                             <div className={`dropdown-menu bg-transparent border-0 ${dropdownOpen ? "show" : ""}`}>
-                                <Link to="/Waste_levels" className=" dropdown-item  pl-10 hover:text-[#05C605] text-[#797575]">
+                                <Link to="/analytics/Waste_levels" className=" dropdown-item  pl-10 hover:text-[#05C605] text-[#797575]">
 
                                     Waste Levels
                                 </Link>
-                                <Link to="#" className="pl-8 dropdown-item hover:text-[#05C605] text-[#797575]">
+                                <Link to="/analytics/sensor_activities" className="pl-8 dropdown-item hover:text-[#05C605] text-[#797575]">
 
                                     Sensor Activities
                                 </Link>
@@ -96,7 +96,7 @@ const SiderB = () => {
                                 </a>
                             </div>
                             <div className={`dropdown-menu bg-transparent border-0 ${dropdownOpen ? "show" : ""}`}>
-                                <Link to="#" className="dropdown-item text-[#797575]">
+                                <Link to="/schedules/pending_schedules" className="dropdown-item text-[#797575]">
 
                                     Pending Schedule
                                 </Link>
