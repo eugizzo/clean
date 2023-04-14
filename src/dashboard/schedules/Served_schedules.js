@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { FaBars } from "react-icons/fa";
-import SiderB from '../../dashboard/SiderB';
+import SiderB from '../SiderB';
 import Notifications from '../Navbar/Notifications';
 import InfoDropdown from '../Navbar/InfoDropdown';
 import Locations from '../Navbar/Locations';
@@ -11,7 +11,7 @@ import PickDates from '../Navbar/PickDates';
 import Table from './Table';
 import './Tab.css'
 
-const Pending_schedules= () => {
+const Served_schedules= () => {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleSidebar() {
@@ -87,10 +87,13 @@ const Pending_schedules= () => {
             <button className={`pr-5 text-sm ${activeTab === 'home' ? 'active-tab' : ''}`} onClick={() => handleTabClick('home')}>All</button>
           </li>
           <li>
+          <button className={`pr-5 text-sm ${activeTab === 'served' ? 'active-tab' : ''}`} onClick={() => handleTabClick('about')}>Served on Time</button>
+        </li>
+          <li>
             <button className={`pr-5 text-sm ${activeTab === 'about' ? 'active-tab' : ''}`} onClick={() => handleTabClick('about')}>On Time</button>
           </li>
           <li>
-            <button className={`text-sm ${activeTab === 'contact' ? 'active-tab' : ''}`} onClick={() => handleTabClick('contact')}>Over Due</button>
+            <button className={` text-sm ${activeTab === 'contact' ? 'active-tab' : ''}`} onClick={() => handleTabClick('contact')}>Over Due</button>
           </li>
         </ul>
       </nav>
@@ -100,6 +103,10 @@ const Pending_schedules= () => {
         <div className=''>
         <Table />
     
+        </div>
+      )}
+      {activeTab === 'serverd' && (
+        <div className=''>
         </div>
       )}
       {activeTab === 'about' && (
@@ -125,4 +132,4 @@ const Pending_schedules= () => {
   )
 }
 
-export default Pending_schedules
+export default Served_schedules

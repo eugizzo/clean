@@ -11,6 +11,8 @@ import AdminLogin from "./components/pages/LoginPage/AdminLogin";
 import Notifications from "./dashboard/Navbar/Notifications";
 import Sensor_activities from "./dashboard/Analytics/Sensor_activities";
 import Pending_schedules from "./dashboard/schedules/Pending_schedules";
+import Table from "./dashboard/schedules/Table";
+import Served_schedules from "./dashboard/schedules/Served_schedules";
 
 
 
@@ -24,7 +26,8 @@ const App = () => (
         <Route path="/analytics/Waste_levels" element={<Waste_levels/>} />
         <Route path="/analytics/sensor_activities" element={<Sensor_activities />} />
         <Route path="/schedules/pending_schedules" element={<Pending_schedules />} />
-
+        <Route path="/schedules/served_schedules" element={<Served_schedules />} />
+        <Route path="/table" element={<Table />} />
         
         <Route path="/login" element={<Login />} />
         <Route path="/SuperAdmin" element={<AdminLogin />} />

@@ -100,7 +100,7 @@ const SiderB = () => {
 
                                     Pending Schedule
                                 </Link>
-                                <Link to="#" className="dropdown-item text-[#797575]">
+                                <Link to="/schedules/served_schedules" className="dropdown-item text-[#797575]">
 
                                     Served Schedules
                                 </Link>
