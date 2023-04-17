@@ -13,6 +13,7 @@ import Sensor_activities from "./dashboard/Analytics/Sensor_activities";
 import Pending_schedules from "./dashboard/schedules/Pending_schedules";
 import Table from "./dashboard/schedules/Table";
 import Served_schedules from "./dashboard/schedules/Served_schedules";
+import Map from "./dashboard/Home/Map";
 
 
 
@@ -33,6 +34,7 @@ const App = () => (
         <Route path="/SuperAdmin" element={<AdminLogin />} />
        
         <Route path="/notf" element={<Notifications />} />
+        <Route path="/map" element={<Map/>} />
       </Routes>
     </Router>
   
