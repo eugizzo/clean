@@ -116,10 +116,13 @@ const Waste_map = () => {
             </div>
           </div>
         </div>
-        <div className='p-4'>
+        <div>
+
+        <div className='p-4 '>
         <Map className=""/>
+      
         </div>
-        
+        </div>
 
       </div>
 

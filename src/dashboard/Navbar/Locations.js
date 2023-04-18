@@ -19,7 +19,7 @@ function Locations() {
     
     return (
         <div className="flex justify-center ">
-            <div className="relative ">
+            <div className="relative z-3 ">
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     className="relative z-10 block rounded-md  focus:outline-none"
