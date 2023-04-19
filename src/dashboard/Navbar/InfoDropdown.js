@@ -18,8 +18,8 @@ function InfoDropdown() {
           >
             info
           </button>
-          <span className=' mt-[9px]' data-bs-toggle="dropdown">
-            <FontAwesomeIcon icon={faCaretDown} />
+          <span className=' mt-[9px]' data-bs-toggle="dropdown"onClick={() => setIsOpen(!isOpen)}>
+            <FontAwesomeIcon  icon={faCaretDown} />
           </span>
         </div>
         {isOpen && (

@@ -102,7 +102,7 @@ const Waste_map = () => {
                 <div className="ms-3">
                   <p className="h-[70px] text-black"> Total Collection 
                   </p>
-                  <h1 className="mb-0 text-[#05C605] text-2xl flex pl-44" >708</h1>
+                  <h1 className="mb-0 text-[#05C605] text-2xl flex pl-36" >708</h1>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ const Waste_map = () => {
               <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2">
                 <div className="ms-3">
                   <p className="h-[70px] text-black"> Upcoming Schedules</p>
-                  <h1 className="mb-0 text-[#05C605] text-2xl flex pl-48" >6</h1>
+                  <h1 className="mb-0 text-[#05C605] text-2xl flex pl-44" >6</h1>
                 </div>
               </div>
             </div>

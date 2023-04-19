@@ -11,7 +11,8 @@ import Locations from '../Navbar/Locations';
 import Types from '../Navbar/Types';
 import TrashLevel from '../Navbar/TrashLevel';
 import PickDates from '../Navbar/PickDates';
-
+import LineChart from './LineChart';
+import {WasteLevelData} from './WasteLevelData'
 const Waste_map = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -41,35 +42,35 @@ const Waste_map = () => {
           </div>
 
           <div className="navbar-nav  ms-auto">
-          <div className='nav-item flex mr-8'>
-            <div className='mt-2'>
-              <Notifications/>
-            </div>
-            <div className='mt-2'>
-              <InfoDropdown/>
-            </div>
+            <div className='nav-item flex mr-8'>
+              <div className='mt-2'>
+                <Notifications />
+              </div>
+              <div className='mt-2'>
+                <InfoDropdown />
+              </div>
 
+
+            </div>
 
           </div>
-
-        </div>
         </nav>
         {/* Navbar End */}
 
         <div className='flex '>
-        <div className='bg-[#fafbfd]  pl-5'>
-          <Locations/>
+          <div className='bg-[#fafbfd]  pl-5'>
+            <Locations />
+          </div>
+          <div className='ml-6'>
+            <Types />
+          </div>
+          <div className='ml-6'>
+            <TrashLevel />
+          </div>
+          <div className='ml-6'>
+            <PickDates />
+          </div>
         </div>
-        <div className='ml-6'>
-          <Types/>
-        </div>
-        <div className='ml-6'>
-          <TrashLevel/>
-        </div>
-        <div className='ml-6'>
-          <PickDates/>
-        </div>
-      </div>
 
 
 
@@ -80,7 +81,7 @@ const Waste_map = () => {
               <div className="bg-white  rounded shadow d-flex align-items-center justify-content-between p-2 ">
                 <div className="ms-3">
                   <p className=" h-24"> Estimated Total Waste Collection</p>
-                    
+
                   <h4 className="mb-0 text-primary" />
                 </div>
               </div>
@@ -111,6 +112,73 @@ const Waste_map = () => {
               </div>
             </div>
           </div>
+        </div>
+
+
+        <div className='container flex col-sm-12 ml-3 mt-4'>
+          <div className='w-1/3 pr-3'>
+            <div className="bg-white shadow rounded">
+              <div className="p-3">
+                <h3 className='text-black font-bold'>Top 5 aggregate waste levels</h3>
+              </div>
+              <div className="flex justify-center">
+                <LineChart />
+              </div>
+              <div className="card-body">
+              {WasteLevelData.map((lev) => {
+                return (
+                  <div className='flex p-2 justify-between' key={lev.name}>
+                    <div className='text-sm'>{lev.name}</div>
+                    <div className='text-sm text-[#05c605]'>{lev.level}</div>
+                  </div> 
+                );
+              })}
+            </div>
+            </div>
+          </div>
+
+          <div className='w-1/3 pr-3'>
+           <div className="bg-white shadow rounded">
+            <div className="p-3">
+              <h3 className='text-black font-bold'>Top 5 number of collections</h3>
+            </div>
+            <div className="flex justify-center">
+              <LineChart />
+            </div>
+            <div className="card-body">
+            {WasteLevelData.map((lev) => {
+              return (
+                <div className='flex p-2 justify-between' key={lev.name}>
+                  <div className='text-sm'>{lev.name}</div>
+                  <div className='text-sm text-[#05c605]'>{lev.number}</div>
+                </div> 
+              );
+            })}
+          </div>
+
+            </div>
+          </div>
+        <div className='w-1/3 pr-6'>
+        <div className="bg-white shadow rounded">
+          <div className="p-3">
+            <h3 className='text-black font-bold'>Top 5 fill level per collection</h3>
+          </div>
+          <div className="flex justify-center">
+            <LineChart />
+          </div>
+          <div className="card-body">
+          {WasteLevelData.map((lev) => {
+            return (
+              <div className='flex p-2 justify-between' key={lev.name}>
+                <div className='text-sm'>{lev.name}</div>
+                <div className='text-sm text-[#05c605]'>{lev.percentage}</div>
+              </div> 
+            );
+          })}
+        </div>
+        </div>
+      </div>
+
         </div>
 
       </div>
