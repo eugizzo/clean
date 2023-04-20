@@ -2,7 +2,7 @@ import * as React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPages from './components/LandingPages'
 // import Waste_map from "./components/pages/Waste_map";
-import SiderB from "./dashboard/SiderB";
+
 import Waste_map from "./dashboard/Home/Waste_map";
 import Waste_levels from "./dashboard/Analytics/Waste_levels";
 import Waste_activities from "./dashboard/Home/Waste_activities";

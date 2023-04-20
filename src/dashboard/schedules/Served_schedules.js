@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { FaBars } from "react-icons/fa";
-import SiderB from '../SiderB';
+import SiderB from '../SideBar/SiderB'
 import Notifications from '../Navbar/Notifications';
 import InfoDropdown from '../Navbar/InfoDropdown';
 import Locations from '../Navbar/Locations';

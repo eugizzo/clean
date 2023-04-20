@@ -6,7 +6,7 @@ import Select from 'react-select';
 
 
 import { FaBars, FaBell, FaAngleDown } from "react-icons/fa";
-import SiderB from '../../dashboard/SiderB'
+import SiderB from '../SideBar/SiderB'
 import Notifications from '../Navbar/Notifications';
 import InfoDropdown from '../Navbar/InfoDropdown';
 import Locations from '../Navbar/Locations';
@@ -18,7 +18,7 @@ import Map from './Map';
 
 const Waste_map = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+ 
   function toggleSidebar() {
     setIsOpen(!isOpen);
   }

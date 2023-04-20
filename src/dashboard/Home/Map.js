@@ -3,10 +3,7 @@ import 'leaflet/dist/leaflet.css';
 import { FaTrash, FaRegTrashAlt } from "react-icons/fa";
 import icon from './image/Trash.png';
 import icon2 from './image/Trash2.png';
-// import trash from './image/trash-can-flat-red-color-icon-vector-6080939-removebg-preview.png';
 import L from 'leaflet';
-import './customMarker.css';
-import React,{useState} from 'react';
 const customIcon = L.icon({
   iconUrl: icon,
   iconSize: [40, 30],
@@ -28,8 +25,6 @@ const Map = () => {
       <MapContainer className='z-30  h-screen' center={[-1.890051, 30.088856]} zoom={13} scrollWheelZoom={false} style={{ borderRadius: '10px' }}>
 
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-
-
         <div className='leaflet-control leaflet-right leaflet-top  m-[25px] bg-white opacity-70 p-4'>
           <div className='flex '>
             <div className='bg-[#7a7d7a] rounded-full w-[28px] h-[28px]  '>
@@ -116,7 +111,6 @@ const Map = () => {
   karama
 </Popup>
 </Marker>
--1.964116, 30.022416
       </MapContainer>
 
     </div>

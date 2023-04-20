@@ -5,12 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
-import Logo from '../components/images/logo/download.png'
+import './Tab.css'
+import Logo from '../../components/images/logo/download.png'
 const SiderB = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(true);
     const [isDropdown, setIsDropdown]=useState(false)
-  
+    const [activeSubNav, setActiveSubNav] = useState(1);
+
     function toggleSidebar() {
       setIsOpen(!isOpen);
     }
@@ -22,6 +24,18 @@ const SiderB = () => {
     function dropdownHandle() {
       setIsDropdown(!isDropdown);
     }
+    const activeTab1=(e) => {
+        e.preventDefault()
+        setActiveSubNav(1)
+        
+    }
+    const activeTab2=(e) => {
+        e.preventDefault()
+        setActiveSubNav(2)
+        
+    }
+
+
     return (
        
             <nav className="navbar pt-2 navbar-light">
@@ -39,25 +53,29 @@ const SiderB = () => {
                     </div>
                     <div className="navbar-nav w-100 mt-16  z-0">
                         <div className="nav-item dropdown" >
-                            <div style={{ display: 'flex' }}>
+                            <div style={{ display: 'flex' }} onClick={toggleMenu}>
                                 <FaHome className='mt-[12px] text-sm text-[#05C605]' />
-                                <a href="#" className="nav-link text-black flex text-[17px] font-bold active" onClick={toggleMenu}>
+                                <a href="#" className="nav-link text-black flex text-[17px] font-bold " >
 
                                     Home
-                                </a><span className='pl-[85px] mt-2' onClick={toggleMenu}>
+                                </a>
+                                <span className='pl-[85px] mt-2' onClick={toggleMenu}>
                                     <FaAngleDown className='text-sm' />
                                 </span>
 
                             </div>
                             <div className={`dropdown-menu bg-transparent border-0 ${dropdownOpen ? "show" : ""}`}>
-                                <Link to="/home/waste_map" className="dropdown-item hover:text-[#05C605] text-[#05C605]">
-
+                                <div onClick={activeTab1} className={`dropdown-item hover:text-[#05C605]  ${activeSubNav === 1 ? 'NavActive' : ''}`}>
+                                <Link to="/home/waste_map">
                                     C.Waste Map
                                 </Link>
-                                <Link to="/home/waste_activities" className="dropdown-item hover:text-[#05C605] text-[#797575]">
-
-                                    C.Waste Activities
+                               </div>
+                               <div onClick={activeTab2} className={`dropdown-item hover:text-[#05C605]  ${activeSubNav === 2 ? 'NavActive' : ''}`}>
+                                <Link to="/home/waste_activities">
+                                C.Waste Activities
                                 </Link>
+                               </div>
+                                
                             </div>
                         </div>
 
@@ -176,7 +194,6 @@ const SiderB = () => {
                             <div style={{ display: 'flex' }}>
                                 <FiUsers className='mt-[12px] text-sm' />
                                 <a href="#" className="nav-link  flex text-[17px] font-bold" onClick={toggleMenu}>
-
                                     Accounts
 
                                 </a>
