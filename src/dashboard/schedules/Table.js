@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import Pagination from 'react-js-pagination';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import { FiDownload } from 'react-icons/fi';
-
+import axios from 'axios';
 
 
 import { Link } from 'react-router-dom';
+
+
 
 const data = [
     {
@@ -17,7 +19,7 @@ const data = [
         Created: 'Feb 10, 2023 4:59 PM',
         Schedule: 'Feb 10, 2023 9:59 PM',
         Location: 'mulindi market',
-        BinId: 'ML-0002',
+        bin_id: 'ML-0002',
         Type: 'Biodegradable',
         ScheduleStatus: 'ontime',
     },
@@ -27,7 +29,7 @@ const data = [
         Created: 'Feb 12, 2023 10:05 PM',
         Schedule: 'Feb 12, 2023 10:05 PM',
         Location: 'nyabugogo mutangana market',
-        BinId: 'NY-0001',
+        bin_id: 'NY-0001',
         Type: 'Non-Biodegradable',
         ScheduleStatus: 'late',
     },
@@ -38,6 +40,7 @@ const Table = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [pageSize, setPageSize] = useState(5);
     // const [isOpen, setIsOpen] = useState(false);
+    const [scheduleInfo, setScheduleInfo] = useState([]);
 
     const handleSearch = (event) => {
         setSearchText(event.target.value);
@@ -56,7 +59,7 @@ const Table = () => {
             row.Created,
             row.Schedule,
             row.Location,
-            row.BinId,
+            row.bin_id,
             row.Type,
             row.ScheduleStatus,
         ]);
@@ -76,7 +79,7 @@ const Table = () => {
             row.Created,
             row.Schedule,
             row.Location,
-            row.BinId,
+            row.bin_id,
             row.Type,
             row.ScheduleStatus,
         ]);
@@ -90,11 +93,6 @@ const Table = () => {
         document.body.appendChild(link);
         link.click();
     }
-
-
-
-
-
 
     // const filteredData = data.filter(
     //     (row) => searchText === '' || row.Alert.toLowerCase().includes(searchText.toLowerCase())
@@ -111,6 +109,24 @@ const Table = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
+
+      const API_URL = 'https://cleankigaliapi.huzalabs.com/api/cleankigali/get_device_info';
+      const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZmJkYThjM2RiNGRhMDRkNDA2MjU3YSIsImFjY291bnRfdHlwZSI6InVzZXJfYWNjb3VudCIsImFjY2Vzc19yb2xlIjoie1wiZGVuaWVkX21lbnVcIjpbXSxcImRlbmllZF9mZWF0dXJlc1wiOltdLFwiYWN0aW9uX3JpZ2h0c1wiOntcInJlYWRcIjp0cnVlLFwid3JpdGVcIjp0cnVlLFwidXBkYXRlXCI6dHJ1ZSxcImRlbGV0ZVwiOmZhbHNlfX0iLCJpYXQiOjE2ODI1MTMzMDcsImV4cCI6MTY4MjU5OTcwN30.OEbrJ3ss2nawI_zYMu0yu7OVQOuDwdmq0A8PmAreZxg';
+      
+      const headers = {
+        'Authorization': `Bearer ${token}`
+      };
+      
+      axios.get(API_URL, { headers })
+        .then(response => {
+            console.log(response.data)
+            setScheduleInfo(response.data);
+        })
+        .catch(error => {
+            console.log(error)
+        });
+        
+        
 
     return (
         <div>
@@ -168,7 +184,7 @@ const Table = () => {
                 </div>
 
                 <div className="row pl-2">
-                    
+              
                         <table className="table">
                             <thead>
                                 <tr className='text-sm'>
@@ -183,21 +199,22 @@ const Table = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {paginatedData.map((row) => (
-                                    <tr key={row.id} className='text-[11px]'>
-                                        <td>{row.Alert}</td>
-                                        <td>{row.Created}</td>
-                                        <td>{row.Schedule}</td>
-                                        <td>{row.Location}</td>
-                                        <td className='text-[#05C605]'>{row.BinId}</td>
-                                        <td>{row.Schedule}</td>
-                                        <td>{row.Type}</td>
-                                        <td>{row.ScheduleStatus}</td>
+                               
+                                    {scheduleInfo.map(schedule => (
+                                    <tr key={schedule.id} className='text-[11px]'>
+                                        <td>{schedule.bin_id.final_alert_at}</td>
+                                        <td>{schedule.createdAt}</td>
+                                        <td>{schedule.schedule_date}</td>
+                                        <td>{schedule.Location}</td>
+                                        <td className='text-[#05C605]'>{schedule.bin_id}</td>
+                                        <td>{schedule.type}</td>
+                                        <td>{schedule.Type}</td>
+                                        <td>{schedule.schedule_status}</td>
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
-                   
+                                   
                 </div>
 
                     <div className="d-flex justify-content-end align-items-center">

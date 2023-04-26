@@ -2,7 +2,7 @@ import React from 'react';
 import { FaHome, FaClock, FaRegTrashAlt, FaAngleDown } from "react-icons/fa";
 import { FiUsers } from 'react-icons/fi';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationTriangle, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
 import { Icon } from '@iconify/react';
 
 export const SidebarData = [

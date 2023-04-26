@@ -34,6 +34,16 @@ const SiderB = () => {
         setActiveSubNav(2)
         
     }
+    const activeTab3=(e) => {
+        e.preventDefault()
+        setActiveSubNav(3)
+        
+    }
+    const activeTab4=(e) => {
+        e.preventDefault()
+        setActiveSubNav(4)
+        
+    }
 
 
     return (
@@ -53,9 +63,9 @@ const SiderB = () => {
                     </div>
                     <div className="navbar-nav w-100 mt-16  z-0">
                         <div className="nav-item dropdown" >
-                            <div style={{ display: 'flex' }} onClick={toggleMenu}>
-                                <FaHome className='mt-[12px] text-sm text-[#05C605]' />
-                                <a href="#" className="nav-link text-black flex text-[17px] font-bold " >
+                            <div  className={activeSubNav === 1 ? 'NavActive' : ''} style={{ display: 'flex' }} onClick={toggleMenu}>
+                                <FaHome className='mt-[12px] text-sm ' />
+                                <a href="#" onClick={activeTab1} className={`nav-link text-black flex text-[14px] font-bold text-[#05C605] ${activeSubNav === 1 ? 'NavActive' : ''}`}>
 
                                     Home
                                 </a>
@@ -64,13 +74,13 @@ const SiderB = () => {
                                 </span>
 
                             </div>
-                            <div className={`dropdown-menu bg-transparent border-0 ${dropdownOpen ? "show" : ""}`}>
-                                <div onClick={activeTab1} className={`dropdown-item hover:text-[#05C605]  ${activeSubNav === 1 ? 'NavActive' : ''}`}>
+                            <div className={`dropdown-menu -pt-1 bg-transparent border-0 ${dropdownOpen ? "show" : ""}`}>
+                                <div onClick={activeTab1} className={`dropdown-item hover:text-[#05C605] text-[14px] ${activeSubNav === 1 ? 'NavActive' : ''}`}>
                                 <Link to="/home/waste_map">
                                     C.Waste Map
                                 </Link>
                                </div>
-                               <div onClick={activeTab2} className={`dropdown-item hover:text-[#05C605]  ${activeSubNav === 2 ? 'NavActive' : ''}`}>
+                               <div onClick={activeTab2} className={`dropdown-item hover:text-[#05C605] text-[14px] ${activeSubNav === 2 ? 'NavActive' : ''}`}>
                                 <Link to="/home/waste_activities">
                                 C.Waste Activities
                                 </Link>
@@ -82,7 +92,7 @@ const SiderB = () => {
                         <div className="nav-item dropdown" >
                             <div style={{ display: 'flex' }}>
                                 <Icon icon="oi:grid-two-up" className='text-sm mt-[12px]' />
-                                <a href="#" className="nav-link text-black  flex text-[17px] font-bold " onClick={toggleMenu}>
+                                <a href="#" className="nav-link text-black  flex text-[14px] font-bold " onClick={toggleMenu}>
 
                                     Analytics
                                 </a><span className='pl-16 mt-2' onClick={toggleMenu}>
@@ -91,21 +101,27 @@ const SiderB = () => {
 
                             </div>
                             <div className={`dropdown-menu bg-transparent border-0 ${dropdownOpen ? "show" : ""}`}>
-                                <Link to="/analytics/Waste_levels" className=" dropdown-item  pl-10 hover:text-[#05C605] text-[#797575]">
+                               
 
-                                    Waste Levels
+                                <div onClick={activeTab3} className={`dropdown-item text-[14px] pl-10 hover:text-[#05C605] text-[#797575]  ${activeSubNav === 3 ? 'NavActive' : ''}`}>
+                                <Link to="/analytics/Waste_levels">
+                                Waste Levels
                                 </Link>
-                                <Link to="/analytics/sensor_activities" className="pl-8 dropdown-item hover:text-[#05C605] text-[#797575]">
+                               </div>
 
-                                    Sensor Activities
-                                </Link>
+                               <div onClick={activeTab4} className={`pl-8 dropdown-item hover:text-[#05C605] text-[14px] text-[#797575]  ${activeSubNav === 4 ? 'NavActive' : ''}`}>
+                               <Link to="/analytics/sensor_activities">
+                               Sensor Activities
+                               </Link>
+                              </div>
+
                             </div>
                         </div>
 
                         <div className="nav-item dropdown" >
                             <div style={{ display: 'flex' }}>
                                 <FaClock className='mt-[12px] text-sm' />
-                                <a href="#" className="nav-link flex text-black  text-[17px] font-bold" onClick={toggleMenu}>
+                                <a href="#" className="nav-link flex text-black  text-[14px] font-bold" onClick={toggleMenu}>
 
                                     Schedules
                                     <span className='pl-[70px] mt-2'>
@@ -114,11 +130,11 @@ const SiderB = () => {
                                 </a>
                             </div>
                             <div className={`dropdown-menu bg-transparent border-0 ${dropdownOpen ? "show" : ""}`}>
-                                <Link to="/schedules/pending_schedules" className="dropdown-item text-[#797575]">
+                                <Link to="/schedules/pending_schedules" className="dropdown-item text-[#797575] text-[14px]">
 
                                     Pending Schedule
                                 </Link>
-                                <Link to="/schedules/served_schedules" className="dropdown-item text-[#797575]">
+                                <Link to="/schedules/served_schedules" className="dropdown-item text-[#797575] text-[14px]">
 
                                     Served Schedules
                                 </Link>
@@ -130,7 +146,7 @@ const SiderB = () => {
 
                             <div className='flex'>
                                 <FontAwesomeIcon icon={faExclamationTriangle} className='text-sm mt-[12px]' />
-                                <a href="#" className="nav-link text-black text-[17px] font-bold" onClick={toggleMenu}>
+                                <a href="#" className="nav-link text-black text-[14px] font-bold" onClick={toggleMenu}>
 
                                     Alerts
 
@@ -140,11 +156,11 @@ const SiderB = () => {
                                 </span></a>
                             </div>
                             <div className={`dropdown-menu bg-transparent border-0 ${dropdownOpen ? "show" : ""}`} >
-                                <Link to="#" className="dropdown-item text-[#797575]">
+                                <Link to="#" className="dropdown-item text-[#797575] text-[14px]">
 
                                     Waste Bin Levels
                                 </Link>
-                                <Link to="#" className="dropdown-item text-[#797575]">
+                                <Link to="#" className="dropdown-item text-[#797575] text-[14px]">
 
                                     Sensor State
                                 </Link>
@@ -156,7 +172,7 @@ const SiderB = () => {
 
                             <div className='flex'>
                                 <FaCopy className='text-sm mt-[12px]' />
-                                <a href="#" className="nav-link text-black text-[17px] font-bold" onClick={toggleMenu}>
+                                <a href="#" className="nav-link text-black text-[14px] font-bold" onClick={toggleMenu}>
 
                                     Incidents
                                 </a>
@@ -166,11 +182,11 @@ const SiderB = () => {
 
                             </div>
                             <div className={`dropdown-menu bg-transparent border-0 ${dropdownOpen ? "show" : ""}`} >
-                                <Link to="#" className="dropdown-item text-[17px] text-[#797575]">
+                                <Link to="#" className="dropdown-item text-[14px] text-[#797575]">
 
                                     Waste Bin Levels
                                 </Link>
-                                <Link to="#" className="dropdown-item text-[17px] text-[#797575]">
+                                <Link to="#" className="dropdown-item text-[14px] text-[#797575]">
 
                                     Sensor State
                                 </Link>
@@ -181,7 +197,7 @@ const SiderB = () => {
                         <div className="nav-item dropdown" >
                             <div style={{ display: 'flex' }}>
                                 <FaRegTrashAlt className='mt-[12px] text-sm' />
-                                <a href="#" className="nav-link  flex text-black text-[17px] font-bold" onClick={toggleMenu}>
+                                <a href="#" className="nav-link  flex text-black text-[14px] font-bold" onClick={toggleMenu}>
 
                                     Bins & Devices
 
@@ -193,7 +209,7 @@ const SiderB = () => {
                         <div className="nav-item dropdown" >
                             <div style={{ display: 'flex' }}>
                                 <FiUsers className='mt-[12px] text-sm' />
-                                <a href="#" className="nav-link  flex text-[17px] font-bold" onClick={toggleMenu}>
+                                <a href="#" className="nav-link  flex text-[14px] font-bold" onClick={toggleMenu}>
                                     Accounts
 
                                 </a>

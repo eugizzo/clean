@@ -25,6 +25,7 @@ const Map = () => {
       <MapContainer className='z-30  h-screen' center={[-1.890051, 30.088856]} zoom={13} scrollWheelZoom={false} style={{ borderRadius: '10px' }}>
 
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        
         <div className='leaflet-control leaflet-right leaflet-top  m-[25px] bg-white opacity-70 p-4'>
           <div className='flex '>
             <div className='bg-[#7a7d7a] rounded-full w-[28px] h-[28px]  '>
@@ -86,7 +87,7 @@ const Map = () => {
          
         </div>
 
-        <Marker position={[-1.948060, 30.126742]} icon={customIcon}>
+        <Marker position={[-1.948060, 30.126742]} icon={customIcon} className="leaflet-marker-icon leaflet-data-marker leaflet-zoom-animated leaflet-interactive" >
         <Popup>
           A custom marker with a red background.
         </Popup>

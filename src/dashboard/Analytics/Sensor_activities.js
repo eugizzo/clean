@@ -5,6 +5,7 @@ import Notifications from '../Navbar/Notifications';
 import InfoDropdown from '../Navbar/InfoDropdown';
 import Locations from '../Navbar/Locations';
 import PickDates from '../Navbar/PickDates';
+import Chart from './Chart';
 const Sensor_activities = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -92,7 +93,7 @@ const Sensor_activities = () => {
                     <p className=" text-black font-bold">Sensor Monitoring </p>
                     
 
-
+<Chart/>
 
 
                   </div>
