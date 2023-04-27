@@ -22,7 +22,7 @@ const Map = () => {
   return (
     <div className=''>
 
-      <MapContainer className='z-30  h-screen' center={[-1.890051, 30.088856]} zoom={13} scrollWheelZoom={false} style={{ borderRadius: '10px' }}>
+      <MapContainer className='z-30  h-screen' center={[-1.925517, 30.096472]} zoom={13} scrollWheelZoom={false} style={{ borderRadius: '10px' }}>
 
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         

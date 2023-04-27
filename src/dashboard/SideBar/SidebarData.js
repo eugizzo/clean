@@ -1,15 +1,17 @@
 import React from 'react';
-import { FaHome, FaClock, FaRegTrashAlt, FaAngleDown } from "react-icons/fa";
+import { FaHome, FaClock, FaRegTrashAlt,FaCopy} from "react-icons/fa";
 import { FiUsers } from 'react-icons/fi';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
 import { Icon } from '@iconify/react';
+
 
 export const SidebarData = [
   {
     title: 'Home',
     path: '/',
     icon: <FaHome className='mt-2 text-sm text-[#05C605]' />,
+    
     
 
     subNav: [
@@ -33,12 +35,12 @@ export const SidebarData = [
     subNav: [
       {
         title: ' Waste Levels',
-        path: '/Waste_levels',
+        path: '/analytics/Waste_levels',
         
       },
       {
         title: 'Sensor Activities',
-        path: '/sensor_activities',
+        path: '/analytics/sensor_activities',
         
         
       }
@@ -53,7 +55,7 @@ export const SidebarData = [
 
     subNav: [
       {
-        title: 'Message 1',
+        title: 'Pending Schedules',
         path: '/schedules/pending_schedules',
       },
       {
@@ -62,23 +64,7 @@ export const SidebarData = [
       }
     ]
   },
-  {
-    title: 'Schedules',
-    path: '/Schedules',
-    icon: <FaClock className='mt-2 text-sm'/>,
   
-
-    subNav: [
-      {
-        title: 'Message 1',
-        path: '/schedules/pending_schedules',
-      },
-      {
-        title: 'Served Schedules',
-        path: '/schedules/served_schedules',
-      }
-    ]
-  },
   {
     title: 'Alerts',
     path: '/Alerts',
@@ -99,7 +85,7 @@ export const SidebarData = [
   {
     title: 'Incidentss',
     path: '/Incidents',
-    icon:  <FontAwesomeIcon icon={faExclamationTriangle} className='text-sm mt-2' />,
+    icon:  <FaCopy className='text-sm mt-2' />,
   
 
     subNav: [

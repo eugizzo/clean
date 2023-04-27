@@ -25,15 +25,11 @@ const Login = () => {
       setPasswordType("password")
     }
 
-    const onSubmit =(event)=>{
-    event.preventDefault()
-    }
-
     const [user, setUser] = useState({
       email: '',
       password: ''
     });
-
+     console.log(user)
     const handleSubmit = (event) => {
       event.preventDefault();
     

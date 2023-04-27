@@ -110,32 +110,34 @@ const Table = () => {
     const [isOpen, setIsOpen] = useState(false);
 
 
-      const API_URL = 'https://cleankigaliapi.huzalabs.com/api/cleankigali/get_device_info';
-      const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZmJkYThjM2RiNGRhMDRkNDA2MjU3YSIsImFjY291bnRfdHlwZSI6InVzZXJfYWNjb3VudCIsImFjY2Vzc19yb2xlIjoie1wiZGVuaWVkX21lbnVcIjpbXSxcImRlbmllZF9mZWF0dXJlc1wiOltdLFwiYWN0aW9uX3JpZ2h0c1wiOntcInJlYWRcIjp0cnVlLFwid3JpdGVcIjp0cnVlLFwidXBkYXRlXCI6dHJ1ZSxcImRlbGV0ZVwiOmZhbHNlfX0iLCJpYXQiOjE2ODI1MTMzMDcsImV4cCI6MTY4MjU5OTcwN30.OEbrJ3ss2nawI_zYMu0yu7OVQOuDwdmq0A8PmAreZxg';
-      
-      const headers = {
-        'Authorization': `Bearer ${token}`
-      };
-      
-      axios.get(API_URL, { headers })
-        .then(response => {
-            console.log(response.data)
-            setScheduleInfo(response.data);
-        })
-        .catch(error => {
-            console.log(error)
-        });
-        
-        
+     
+const API_URL = 'https://cleankigaliapi.huzalabs.com/api/cleankigali/get_device_info';
 
+const token = localStorage.getItem('token');
+console.log(token)
+if (token) {
+  const headers = {
+    'Authorization': `Bearer ${token}`
+  };
+  axios.post(API_URL , { headers })
+    .then(response => {
+      console.log(response.data);
+      setScheduleInfo(response.data)
+    })
+    .catch(error => {
+      if (error.response.status === 401) {
+        console.log("Authentication failed. Please log in again.");
+      } else {
+        console.log(error);
+      }
+    });
+} else {
+    window.location.href = "/login";
+  // Redirect to login page or perform appropriate action for unauthorized access
+}
+        
     return (
         <div>
-
-
-
-
-
-
             <div className='p-3 bg-white  rounded '>
 
                 <div className='flex justify-between'>

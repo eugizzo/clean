@@ -41,8 +41,8 @@ const LandingPages = () => {
        >
         <img src={image} className="w-[1050px]  mt-32 -sm:mt-2  rounded-[20px] " />
       </div>
-      <div class="location " id="zone">
-        <div class="container">
+      <div className="location " id="zone">
+        <div className="container">
 
           <div className='w-full h-50 bg-no-repeat bg-cover from-gray-600' >
             <h1 className='flex justify-center -mt-2  text-4xl'  
