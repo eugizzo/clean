@@ -132,7 +132,7 @@ if (token) {
       }
     });
 } else {
-    window.location.href = "/login";
+    // window.location.href = "/login";
   // Redirect to login page or perform appropriate action for unauthorized access
 }
         

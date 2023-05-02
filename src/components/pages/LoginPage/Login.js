@@ -10,12 +10,7 @@ const Login = () => {
 
   const navigate = useNavigate();
     const [passwordType, setPasswordType] = useState("password");
-    const [passwordInput, setPasswordInput] = useState("");
 
-    const handlePasswordChange =(event)=>{
-         setPasswordInput(event.target.value);
-         setUser({...user, password: event.target.value})}
-    
     const togglePassword =()=>{
       if(passwordType==="password")
       {
@@ -29,7 +24,7 @@ const Login = () => {
       email: '',
       password: ''
     });
-     console.log(user)
+     
     const handleSubmit = (event) => {
       event.preventDefault();
     
@@ -37,17 +32,17 @@ const Login = () => {
         .then((response) => {
           console.log(response.data);
           const token = response.data.token;
-         localStorage.setItem('token', token);
-          // do something with the response data, e.g. save the token to local storage
+         
           if(response.status === 200){
             navigate('/home/waste_map')
+            localStorage.setItem('token', token);
           }
           else{
           }
         })
         .catch((error) => {
           console.log(error);
-          // handle the error, e.g. display an error message
+         
           alert('credentials not match')
         });
     };
@@ -87,9 +82,9 @@ const Login = () => {
                <input 
                type={passwordType} 
                
-               onChange={handlePasswordChange} 
+               onChange={(event)=>setUser({...user, password: event.target.value})}
                required
-               value={passwordInput} 
+               value={user.password} 
                name="password" 
                class="border-none outline-none bg-[#fafbfd] ml-2" 
                placeholder="Password" />

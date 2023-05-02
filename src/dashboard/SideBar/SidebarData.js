@@ -92,6 +92,7 @@ export const SidebarData = [
       {
         title: 'Waste Bin Levels',
         path: '/incidents/waste_binlevels',
+       
       },
       {
         title: 'Sensor State',
@@ -100,7 +101,7 @@ export const SidebarData = [
     ]
   },
   {
-    title: 'Bins & Devices',
+    title: 'Bins_&_Devices',
     path: '/incidents/waste_binlevels',
     icon:  <FaRegTrashAlt className='mt-[10px] text-sm' />,
   

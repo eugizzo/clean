@@ -76,10 +76,7 @@ const Pending_schedules= () => {
         </div>
       </div>
 
-
-
         <hr className='mt-3 ml-5 mr-5' />
-
 
         <nav className='mt-4 ml-5'>
         <ul className='flex'>

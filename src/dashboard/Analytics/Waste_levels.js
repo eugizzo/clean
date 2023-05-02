@@ -13,20 +13,20 @@ import TrashLevel from '../Navbar/TrashLevel';
 import PickDates from '../Navbar/PickDates';
 import LineChart from './LineChart';
 import { WasteLevelData } from './WasteLevelData'
+import Table from '../schedules/Table';
 const Waste_map = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleSidebar() {
     setIsOpen(!isOpen);
   }
+
   const [activeTab, setActiveTab] = useState('home');
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
   return (
-
-
 
     <div className=" bg-white d-flex p-0">
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
@@ -77,57 +77,59 @@ const Waste_map = () => {
         </div>
         <hr className='mt-3 ml-5 mr-5' />
         <nav className='mt-4 ml-5'>
-        <ul className='flex'>
-          <li>
-            <button className={`pr-5  ${activeTab === 'home' ? 'active-tab' : ''}`} onClick={() => handleTabClick('home')}>Waste levels</button>
-          </li>
-          <li>
-            <button className={`pr-5  ${activeTab === 'about' ? 'active-tab' : ''}`} onClick={() => handleTabClick('about')}>waste collection</button>
-          </li>
-          
-        </ul>
-      </nav>
-      <hr className='ml-3 mr-5' />
+          <ul className='flex'>
+            <li>
+              <button className={`pr-5  ${activeTab === 'home' ? 'active-tab' : ''}`} onClick={() => handleTabClick('home')}>Waste levels</button>
+            </li>
+            <li>
+              <button className={`pr-5  ${activeTab === 'about' ? 'active-tab' : ''}`} onClick={() => handleTabClick('about')}>waste collection</button>
+            </li>
 
-        
+          </ul>
+        </nav>
+        <hr className='ml-3 mr-5' />
+
+        {activeTab === 'home' && (
+         
+        <div>
         <div className="container-fluid pt-4 px-4">
           <div className="row g-4">
             <div className="col-sm-6 col-xl-3 ">
               <div className="bg-white  rounded shadow d-flex align-items-center justify-content-between p-2 ">
                 <div className="ms-3">
-                  <p className=" h-16"> Estimated Total Waste Collection</p>
+                  <p className=" h-16 text-[14px] pr-3"> Estimated Total Waste Collection</p>
 
                   <h4 className="mb-0 text-primary" />
-                  <h1 className="mb-0 text-[#05C605] text-2xl flex pl-16" >9751452.48 L</h1>
-                 
+                  <h1 className="mb-0 text-[#05C605] text-2xl flex pl-8" >9751452.48 L</h1>
+
                 </div>
               </div>
             </div>
             <div className="col-sm-6 col-xl-3">
               <div className="bg-white h-28 rounded shadow d-flex align-items-center justify-content-between p-2">
                 <div className="ms-3">
-                  <p className="h-20 pt-2">Number of Active Smart Bins </p>
+                  <p className="h-20 pt-2 text-[14px] pr-3">Number of Active Smart Bins </p>
                   <h4 className="mb-0 text-primary" />
-                  <h1 className="mb-0 text-[#05C605] text-2xl flex pl-32" >717</h1>
+                  <h1 className="mb-0 text-[#05C605] text-2xl flex pl-36" >717</h1>
                 </div>
               </div>
             </div>
             <div className="col-sm-6 col-xl-3">
               <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2">
                 <div className="ms-3">
-                  <p className="h-16"> Total Collection
+                  <p className="h-16 text-[14px] pr-3"> Total Collection
                   </p>
                   <h4 className="mb-0 text-primary" />
-                  <h1 className="mb-0 text-[#05C605] text-2xl flex pl-32" >975145L</h1>
+                  <h1 className="mb-0 text-[#05C605] text-2xl flex pl-20" >975145L</h1>
                 </div>
               </div>
             </div>
             <div className="col-sm-6 col-xl-3">
               <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2">
                 <div className="ms-3">
-                  <p className="h-16">Upcoming Schedules</p>
+                  <p className="h-16 text-[14px] pr-3">Upcoming Schedules</p>
                   <h4 className="mb-0 text-primary" />
-                  <h1 className="mb-0 text-[#05C605] text-2xl flex pl-32" >13600L</h1>
+                  <h1 className="mb-0 text-[#05C605] text-2xl flex pl-24" >13600L</h1>
                 </div>
               </div>
             </div>
@@ -200,7 +202,16 @@ const Waste_map = () => {
           </div>
 
         </div>
-
+        </div>
+        )} 
+        <div className='m-3 h-24 bg-white  rounded mr-4'>
+        {activeTab === 'about' && (
+          <div className=''>
+          <Table />
+      
+          </div>
+        )}
+        </div>
       </div>
 
     </div>

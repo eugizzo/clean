@@ -72,7 +72,7 @@ const Waste_activities = () => {
             <div className="col-sm-6 col-xl-3 ">
               <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2 ">
                 <div className="ms-3">
-                  <p className="h-24 text-black"> Estimated Total Waste
+                  <p className="h-24 text-black text-[14px] pr-3"> Estimated Total Waste
                     Collection</p>
                   <h4 className="mb-0 text-primary" />
                 </div>
@@ -81,7 +81,7 @@ const Waste_activities = () => {
             <div className="col-sm-6 col-xl-3">
               <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2">
                 <div className="ms-3">
-                  <p className="h-24 text-black">Number of Active Smart Bins </p>
+                  <p className="h-24 text-black text-[14px] pr-3">Number of Active Smart Bins </p>
                   <h4 className="mb-0 text-primary" />
                 </div>
               </div>
@@ -89,7 +89,7 @@ const Waste_activities = () => {
             <div className="col-sm-6 col-xl-3">
               <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2">
                 <div className="ms-3">
-                  <p className="h-24 text-black">Total Collection
+                  <p className="h-24 text-black text-[14px] pr-3">Total Collection
                   </p>
                   <h4 className="mb-0 text-primary" />
                 </div>
@@ -98,7 +98,7 @@ const Waste_activities = () => {
             <div className="col-sm-6 col-xl-3">
               <div className="bg-white rounded shadow d-flex align-items-center justify-content-between p-2">
                 <div className="ms-3">
-                  <p className="h-24 text-black">Upcoming Schedules</p>
+                  <p className="h-24 text-black text-[14px] pr-3">Upcoming Schedules</p>
                   <h4 className="mb-0 text-primary" />
                 </div>
               </div>

@@ -20,7 +20,7 @@ const customIcon2 = L.icon({
 const Map = () => {
   
   return (
-    <div className=''>
+    <div className='z-30'>
 
       <MapContainer className='z-30  h-screen' center={[-1.925517, 30.096472]} zoom={13} scrollWheelZoom={false} style={{ borderRadius: '10px' }}>
 
@@ -28,49 +28,49 @@ const Map = () => {
         
         <div className='leaflet-control leaflet-right leaflet-top  m-[25px] bg-white opacity-70 p-4'>
           <div className='flex '>
-            <div className='bg-[#7a7d7a] rounded-full w-[28px] h-[28px]  '>
+            <div className='bg-[#7a7d7a] rounded-full w-[28px] h-[25px]  '>
               <FaTrash className='text-white text-xl pt-[5px] pl-[7px] ' />
             </div>
             <div>
-              <h3 className='text-[15px] p-1'>Low Waste Level</h3>
+              <h3 className='text-[13px] p-1'>Low Waste Level</h3>
             </div>
           </div>
 
           <div className='flex  pt-3'>
-          <div className='bg-[#790279] rounded-full w-[28px] h-[28px]  '>
+          <div className='bg-[#790279] rounded-full w-[28px] h-[25px]  '>
             <FaRegTrashAlt className='text-white text-xl pt-[5px] pl-[7px] ' />
           </div>
           <div>
-            <h3 className='text-[15px] p-1'>Mid Low Level</h3>
+            <h3 className='text-[13px] p-1'>Mid Low Level</h3>
           </div>
         </div>
 
 
         <div className='flex  pt-3'>
-        <div className='bg-black rounded-full w-[28px] h-[28px]  '>
+        <div className='bg-black rounded-full w-[28px] h-[25px]  '>
           <FaRegTrashAlt className=' text-white text-xl pt-[5px] pl-[7px] ' />
         </div>
         <div>
-          <h3 className='text-[15px] p-1'>Mid High Level</h3>
+          <h3 className='text-[13px] p-1'>Mid High Level</h3>
         </div>
       </div>
         
 
       <div className='flex  pt-3'>
-      <div className='bg-[#fd0d0d] rounded-full w-[28px] h-[28px]  '>
+      <div className='bg-[#fd0d0d] rounded-full w-[28px] h-[25px]  '>
         <FaTrash className='text-white text-xl pt-[5px] pl-[7px] ' />
       </div>
       <div>
-        <h3 className='text-[15px] p-1'>Almost Full Level</h3>
+        <h3 className='text-[13px] p-1'>Almost Full Level</h3>
       </div>
     </div>
 
     <div className='flex  pt-3'>
-    <div className='bg-[#0530c6] rounded-full w-[28px] h-[28px]  '>
+    <div className='bg-[#0530c6] rounded-full w-[28px] h-[25px]  '>
       <FaRegTrashAlt className='text-white text-xl pt-[5px] pl-[7px] ' />
     </div>
     <div>
-      <h3 className='text-[15px] p-1'>Just Collected</h3>
+      <h3 className='text-[13px] p-1'>Just Collected</h3>
     </div>
   </div> 
 
@@ -79,7 +79,7 @@ const Map = () => {
   <FaRegTrashAlt className='text-white text-xl pt-[5px] pl-[7px] ' />
   </div>
   <div>
-    <h3 className='text-[15px] p-1'>N Grouped Bins</h3>
+    <h3 className='text-[13px] p-1'>N Grouped Bins</h3>
   </div>
 </div> 
         
